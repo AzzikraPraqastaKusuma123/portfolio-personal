@@ -1,0 +1,18 @@
+﻿L55:                     <li class="nav__item"><a href="#contact" class="nav__link" data-i18n="nav_contact">Kontak</a></li>
+L114:                             <i class='bx bxl-telegram'></i>
+L115:                             <span data-i18n="hero_contact">Hubungi Saya</span>
+L135:                         <a href="https://wa.me/6281316443334" class="social-link" target="_blank" aria-label="WhatsApp">
+L136:                             <i class='bx bxl-whatsapp'></i>
+L185:                                 <span class="stat-number" data-count="3">0</span>
+L190:                                 <span class="stat-number" data-count="9">0</span>
+L192:                                 <span class="stat-label" data-i18n="about_stat_projects">Proyek Selesai</span>
+L195:                                 <span class="stat-number" data-count="5">0</span>
+L197:                                 <span class="stat-label" data-i18n="about_stat_certs">Sertifikasi</span>
+L876:                                             API</span><span>Telegram Bot</span>
+L1058:                     <h2 class="section__title" data-i18n="education_title">Pendidikan & Sertifikasi</h2>
+L1079:                         <h3 class="edu-card__title" data-i18n="cert_title">Bahasa & Sertifikasi</h3>
+L1702:                     <h2 class="section__title" data-i18n="contact_title">Hubungi Saya</h2>
+L1741:                             <a href="https://wa.me/6281316443334" target="_blank" class="contact-social-link">
+L1742:                                 <i class='bx bxl-whatsapp'></i> WhatsApp
+L1789:                     <a href="#contact" data-i18n="nav_contact">Kontak</a>
+L1798:                     <a href="https://wa.me/6281316443334" target="_blank"><i class='bx bxl-whatsapp'></i></a>
