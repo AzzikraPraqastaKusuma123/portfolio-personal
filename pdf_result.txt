@@ -1,0 +1,46 @@
+======================================================================
+FILE: 4816a304-d65a-4fc0-9a8e-cdd2f99e20e4.pdf
+======================================================================
+'SERTIFIKAT PELATIHAN'
+'2299818850-13876/MS/BLSDM.Komdigi/2026'
+'Diberikan kepada'
+"AZ'ZIKRA PRAQASTA KUSUMA"
+'telah menyelesaikan pelatihan'
+'Pengenalan Data Science dan Pemanfaatannya di Berbagai Sektor'
+'Micro Skill\nDigital Talent Scholarship 2026'
+'yang diselenggarakan oleh Pusat Pengembangan Literasi Digital'
+'pada tahun 2026 selama 1 Jam Pelatihan'
+'Jakarta, 26 Februari 2026'
+'KEPALA BADAN PENGEMBANGAN\nSDM KOMDIGI\nBONIFASIUS W. PUDJIANTO'
+'Scan QR Code untuk validasi sertifikat'
+'Pelatihan Pengenalan Data Science dan Pemanfaatannya di Berbagai Sektor\nMicro Skill Digital Talent Scholarship 2026\nTotal 1 Jam Pelatihan'
+'Materi\nJumlah JP'
+'Konsep Data Science\n0.1'
+'Tugas dan Peran Data Scientist\n0.2'
+'Skill Dasar Data Scientist\n0.2'
+'Pemanfaatan Data Science\n0.1'
+'Peluang di Masa Depan\n0.1'
+'Tantangan di Masa Depan\n0.1'
+'Perbedaan Data Science dan Data Analysis\n0.2'
+'Powered by TCPDF (www.tcpdf.org)'
+
+======================================================================
+FILE: 1742056395768.pdf
+======================================================================
+
+======================================================================
+FILE: Certificate-of-Completion-Classical-Cryptography-for-Beginner.pdf
+======================================================================
+'Azzikra Praqasta'
+'Has Completed the Classical Cryptography for Beginner Course  and\nshowing an understanding of its course module and requirement.'
+'Scan for verification'
+'Completed on August 30, 2023'
+'Certificate ID : CCFB1108231540'
+
+======================================================================
+FILE: Ethical_Hacker_Badge20240203-29-cbvz8m.pdf
+======================================================================
+'Azzikra Praqasta Kusuma'
+'February 03, 2024'
+'Powered by TCPDF (www.tcpdf.org)'
+

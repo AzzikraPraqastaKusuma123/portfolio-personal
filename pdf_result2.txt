@@ -1,0 +1,14 @@
+=== ETHICAL HACKER BADGE ===
+METADATA: {'format': 'PDF 1.7', 'title': '', 'author': 'PDF Generator API', 'subject': '', 'keywords': 'Automated document generation with PDF Generator API. PDFLib:', 'creator': 'PDF Generator API (https://pdfgeneratorapi.com)', 'producer': 'TCPDF 6.6.5 (http://www.tcpdf.org)', 'creationDate': "D:20240203192527+00'00'", 'modDate': "D:20240203192527+00'00'", 'trapped': '', 'encryption': None}
+Pages: 1
+Page 1 text: 'Azzikra Praqasta Kusuma\nFebruary 03, 2024\nPowered by TCPDF (www.tcpdf.org)\n'
+  size=25.5 | 'Azzikra Praqasta Kusuma'
+  size=9.8 | 'February 03, 2024'
+  size=1.0 | 'Powered by TCPDF (www.tcpdf.org)'
+
+=== 1742056395768.pdf ===
+METADATA: {'format': 'PDF 1.7', 'title': '', 'author': '', 'subject': '', 'keywords': '', 'creator': '', 'producer': 'iLovePDF', 'creationDate': '', 'modDate': 'D:20260228205312Z', 'trapped': '', 'encryption': None}
+Pages: 1
+Page 1 text: ''
+  Images on page: 1
+  Image list: [(4, 0, 877, 1280, 8, 'DeviceRGB', '', 'X0', 'FlateDecode')]
