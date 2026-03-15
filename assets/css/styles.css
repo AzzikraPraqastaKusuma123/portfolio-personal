@@ -769,7 +769,8 @@ button {
     border: 1.5px solid rgba(115, 80, 255, 0.4);
     border-radius: var(--radius-full);
     font-size: var(--fs-sm);
-    color: var(--text-primary);
+    color: #ffffff; /* Explicitly forced white for max visibility */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
     font-weight: 600;
     margin-bottom: var(--space-lg);
     box-shadow: 0 0 20px rgba(115, 80, 255, 0.15);
@@ -4648,6 +4649,21 @@ button {
         width: 230px;
         height: 230px;
     }
+    .hero__image-glow {
+        bottom: 55px;
+        width: 280px;
+        height: 280px;
+    }
+    .hero__image-ring {
+        bottom: 45px;
+        width: 300px;
+        height: 300px;
+    }
+    .hero__image-ring--2 {
+        bottom: 30px;
+        width: 330px;
+        height: 330px;
+    }
 
     .hero__img {
         width: 580px;
@@ -4895,6 +4911,21 @@ button {
         bottom: 60px;
         width: 190px;
         height: 190px;
+    }
+    .hero__image-glow {
+        bottom: 45px;
+        width: 220px;
+        height: 220px;
+    }
+    .hero__image-ring {
+        bottom: 35px;
+        width: 240px;
+        height: 240px;
+    }
+    .hero__image-ring--2 {
+        bottom: 20px;
+        width: 270px;
+        height: 270px;
     }
 
     .hero__img {
