@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 
 <head>
@@ -143,7 +143,19 @@
                         <div class="hero__image-glow"></div>
                         <div class="hero__image-ring"></div>
                         <div class="hero__image-ring hero__image-ring--2"></div>
-                        <img src="assets/img/perfil.png" alt="Azzikra Praqasta Kusuma" class="hero__img">
+                        <!-- Shadow wrapper for the pop-out image since drop-shadow on clip-path hides the shadow -->
+                        <div class="hero__image-shadows"></div>
+                        
+                        <!-- Circle base (backdrop) -->
+                        <div class="hero__circle"></div>
+                        
+                        <!-- Inner image (perfectly cropped to the circle bottom) -->
+                        <div class="hero__circle-crop">
+                            <img src="assets/img/perfil.png" alt="Azzikra Praqasta" class="hero__img hero__img--inner">
+                        </div>
+
+                        <!-- Outer image (overlaps flawlessly, top half pops out freely) -->
+                        <img src="assets/img/perfil.png" alt="Azzikra Praqasta" class="hero__img hero__img--outer">
                     </div>
                     <div class="floating-badge badge--1">
                         <i class='bx bx-code-alt'></i>
@@ -430,42 +442,48 @@
                 <!-- Skills Categories -->
                 <div class="skills__categories">
                     <div class="skill-category-card">
-                        <div class="skill-category-icon">
-                            <i class='bx bx-brain'></i>
+                        <div class="skill-category-header">
+                            <div class="skill-category-icon">
+                                <i class='bx bx-brain'></i>
+                            </div>
+                            <h3 class="skill-category-title">Soft Skills</h3>
                         </div>
-                        <h3 class="skill-category-title">Soft Skills</h3>
                         <ul class="skill-category-list">
-                            <li>Analytical Thinking & Problem Solving</li>
-                            <li data-i18n="skill_soft_2">Komunikasi dan Public Speaking</li>
-                            <li data-i18n="skill_soft_3">Kreativitas & Critical Thinking</li>
-                            <li data-i18n="skill_soft_4">Kolaborasi Tim & Kepemimpinan</li>
-                            <li data-i18n="skill_soft_5">Manajemen Waktu & Manajemen Proyek</li>
+                            <li><i class='bx bx-badge-check'></i> <span>Analytical Thinking & Problem Solving</span></li>
+                            <li><i class='bx bx-badge-check'></i> <span data-i18n="skill_soft_2">Komunikasi dan Public Speaking</span></li>
+                            <li><i class='bx bx-badge-check'></i> <span data-i18n="skill_soft_3">Kreativitas & Critical Thinking</span></li>
+                            <li><i class='bx bx-badge-check'></i> <span data-i18n="skill_soft_4">Kolaborasi Tim & Kepemimpinan</span></li>
+                            <li><i class='bx bx-badge-check'></i> <span data-i18n="skill_soft_5">Manajemen Waktu & Manajemen Proyek</span></li>
                         </ul>
                     </div>
                     <div class="skill-category-card">
-                        <div class="skill-category-icon">
-                            <i class='bx bx-code-block'></i>
+                        <div class="skill-category-header">
+                            <div class="skill-category-icon">
+                                <i class='bx bx-code-block'></i>
+                            </div>
+                            <h3 class="skill-category-title">Tech Stack</h3>
                         </div>
-                        <h3 class="skill-category-title">Tech Stack</h3>
                         <ul class="skill-category-list">
-                            <li>Node.js, Express.js, RESTful API</li>
-                            <li>React.js, JavaScript, HTML, CSS</li>
-                            <li>PHP & Laravel</li>
-                            <li>MySQL & SQL</li>
-                            <li>Flutter & Dart, Python, Java</li>
+                            <li><i class='bx bx-server'></i> <span>Node.js, Express.js, RESTful API</span></li>
+                            <li><i class='bx bx-code-alt'></i> <span>React.js, JavaScript, HTML, CSS</span></li>
+                            <li><i class='bx bxl-php'></i> <span>PHP & Laravel</span></li>
+                            <li><i class='bx bx-data'></i> <span>MySQL & SQL</span></li>
+                            <li><i class='bx bx-mobile-alt'></i> <span>Flutter & Dart, Python, Java</span></li>
                         </ul>
                     </div>
                     <div class="skill-category-card">
-                        <div class="skill-category-icon">
-                            <i class='bx bx-wrench'></i>
+                        <div class="skill-category-header">
+                            <div class="skill-category-icon">
+                                <i class='bx bx-wrench'></i>
+                            </div>
+                            <h3 class="skill-category-title">Tools & Workflow</h3>
                         </div>
-                        <h3 class="skill-category-title">Tools & Workflow</h3>
                         <ul class="skill-category-list">
-                            <li>VS Code, GitHub, Git, Trello</li>
-                            <li>Postman (API Testing)</li>
-                            <li>Figma, Canva Pro, OBS Studio, Capcut</li>
-                            <li>Windows & Ubuntu Administration</li>
-                            <li>Microsoft Office, Cisco Packet Tracer</li>
+                            <li><i class='bx bx-git-branch'></i> <span>VS Code, GitHub, Git, Trello</span></li>
+                            <li><i class='bx bx-test-tube'></i> <span>Postman (API Testing)</span></li>
+                            <li><i class='bx bxl-figma'></i> <span>Figma, Canva Pro, OBS Studio, Capcut</span></li>
+                            <li><i class='bx bx-terminal'></i> <span>Windows & Ubuntu Administration</span></li>
+                            <li><i class='bx bx-network-chart'></i> <span>Microsoft Office, Cisco Packet Tracer</span></li>
                         </ul>
                     </div>
                 </div>
@@ -1035,8 +1053,8 @@
                                 </h3>
                                 <span class="timeline__company">HIMSISFO UMB (2023 – 2024)</span>
                                 <p class="timeline__desc" data-i18n="exp_3_desc">Mengkoordinasikan kegiatan
-                                    edukasi, seminar teknologi, dan pelatihan keterampilan untuk anggota
-                                    himpunan.</p>
+                                    edukasi, seminar teknologi, dan pelatihan keterampilan untuk masyarakat dan
+                                    mahasiswa.</p>
                             </div>
                             <div class="timeline__footer">
                                 <span class="timeline__date">

@@ -58,9 +58,9 @@
 
     --text-muted: #6b6b8d;
 
-    --border-color: rgba(255, 255, 255, 0.08);
+    --border-color: #30363d;
 
-    --border-hover: rgba(255, 255, 255, 0.15);
+    --border-hover: #8b949e;
 
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
 
@@ -132,7 +132,7 @@
 
     --radius-xl: 1.5rem;
 
-    --radius-full: 50%;
+    --radius-full: 100px;
 
     /* --- Transitions --- */
 
@@ -180,12 +180,12 @@
 
     --border-hover: rgba(0, 0, 0, 0.15);
 
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
 
-    --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.4);
 
-    --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.1);
-    --shadow-glow: 0 0 30px rgba(115, 80, 255, 0.08);
+    --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.5);
+    --shadow-glow: 0 0 30px rgba(115, 80, 255, 0.15);
 
     --gradient-hero: linear-gradient(135deg, #f8f9ff 0%, #eef0ff 50%, #f0e8ff 100%);
     --gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4));
@@ -359,6 +359,7 @@ button {
 }
 
 .section__subtitle {
+    font-family: var(--font-mono);
 
     display: inline-block;
 
@@ -407,6 +408,7 @@ button {
 /* ===== BUTTONS ===== */
 
 .btn {
+    font-weight: 500;
 
     display: inline-flex;
 
@@ -420,7 +422,7 @@ button {
 
     font-weight: 600;
 
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-full);
 
     transition: all var(--transition-base);
 
@@ -772,7 +774,7 @@ button {
 
     border: 1px solid var(--border-color);
 
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-md);
 
     font-size: var(--fs-sm);
 
@@ -790,7 +792,7 @@ button {
 
     height: 8px;
 
-    border-radius: var(--radius-full);
+    border-radius: var(--radius-sm);
 
     background: var(--success);
 
@@ -991,123 +993,151 @@ button {
 }
 
 .hero__image-wrapper {
-
     position: relative;
-
-    width: 350px;
-
-    height: 350px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
+    width: 500px;
+    height: 520px;
+    margin: 0 auto;
+    overflow: visible;
 }
 
 .hero__image-glow {
-
     position: absolute;
-
-    width: 300px;
-
-    height: 300px;
-
-    border-radius: var(--radius-full);
-
+    bottom: 50px; /* aligned relative to center of circle */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
     background: var(--gradient-primary);
-
-    opacity: 0.15;
-
-    filter: blur(60px);
-
+    opacity: 0.2;
+    filter: blur(80px);
     animation: glow-pulse 4s infinite alternate;
-
 }
 
 @keyframes glow-pulse {
-
-    0% {
-
-        transform: scale(1);
-
-        opacity: 0.15;
-
-    }
-
-    100% {
-
-        transform: scale(1.2);
-
-        opacity: 0.25;
-
-    }
-
+    0%   { transform: translateX(-50%) scale(1);   opacity: 0.2; }
+    100% { transform: translateX(-50%) scale(1.3); opacity: 0.35; }
 }
 
+/* Outer decorative rings */
 .hero__image-ring {
-
     position: absolute;
-
-    width: 320px;
-
-    height: 320px;
-
-    border-radius: var(--radius-full);
-
-    border: 2px solid rgba(115, 80, 255, 0.2);
-
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%) rotate(0deg);
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    border: 1px solid rgba(115, 80, 255, 0.2);
     animation: ring-rotate 20s linear infinite;
-
+    transform-origin: center;
 }
 
 .hero__image-ring--2 {
-
-    width: 360px;
-
-    height: 360px;
-
-    border-color: rgba(230, 80, 180, 0.15);
-
+    bottom: 20px;
+    width: 380px;
+    height: 380px;
+    border-color: rgba(230, 80, 180, 0.12);
     animation-direction: reverse;
-
-    animation-duration: 25s;
-
+    animation-duration: 28s;
 }
 
 @keyframes ring-rotate {
-
-    from {
-
-        transform: rotate(0deg);
-
-    }
-
-    to {
-
-        transform: rotate(360deg);
-
-    }
-
+    from { transform: translateX(-50%) rotate(0deg); }
+    to   { transform: translateX(-50%) rotate(360deg); }
 }
 
-.hero__img {
-
-    width: 280px;
-
-    height: 280px;
-
-    border-radius: var(--radius-full);
-
-    object-fit: cover;
-
-    position: relative;
-
+/* 
+ * The Portal (Circle):
+ * Slightly smaller (260px).
+ */
+.hero__circle {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    border: 3px solid rgba(115, 80, 255, 0.7);
+    background: radial-gradient(circle at center,
+        rgba(115, 80, 255, 0.15) 0%,
+        rgba(115, 80, 255, 0.08) 60%,
+        transparent 100%);
+    box-shadow:
+        0 0 50px rgba(115, 80, 255, 0.35),
+        0 0 100px rgba(115, 80, 255, 0.15),
+        inset 0 0 30px rgba(115, 80, 255, 0.1);
     z-index: 2;
+}
 
-    border: 3px solid rgba(115, 80, 255, 0.3);
+/* 
+ * Crop overlay: Identical size as the circle, but with overflow: hidden.
+ * This perfectly slices the inner picture to the arc of the circle.
+ */
+.hero__circle-crop {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    overflow: hidden; /* THE MAGIC FOR THE BOTTOM CUT */
+    z-index: 3;
+}
 
+/* 
+ * Shadow Wrapper explicitly for the pop-out image.
+ * Uses a blurred version of the image underneath everything else 
+ * to provide a solid drop shadow since the outer image is clipped.
+ */
+.hero__image-shadows {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 650px;
+    height: 100%;
+    background-image: url('../img/perfil.png');
+    background-size: 100% auto;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0 -5px 25px rgba(115, 80, 255, 0.4)) blur(8px);
+    opacity: 0.6;
+    z-index: 1;
+}
+
+/* Base properties for both inner and outer image */
+.hero__img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 650px;
+    max-width: none !important; /* Forces inner image to ignore its small 260px parent and match outer image */
+    height: auto;
+    object-fit: contain;
+}
+
+/* 
+ * Inner image is inside the perfect circular crop. 
+ * Since the crop container starts exactly at bottom: 100px relative to wrapper,
+ * the inner image needs bottom: 0 to sit exactly at the same literal position.
+ */
+.hero__img--inner {
+    bottom: 0px; 
+}
+
+/* 
+ * Outer image sits relative to the wrapper.
+ * We clip off the bottom 130px (which is half the circle's height) so it only 
+ * covers the top half, allowing the perfectly cropped inner image to be visible!
+ */
+.hero__img--outer {
+    bottom: 100px; 
+    z-index: 4;
+    /* Hide the bottom 130px so it perfectly reveals the circle-cropped bottom below! */
+    clip-path: inset(0 0 130px 0);
 }
 
 /* Floating Badges */
@@ -1130,7 +1160,7 @@ button {
 
     border: 1px solid var(--border-color);
 
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-md);
 
     font-size: var(--fs-sm);
 
@@ -1154,9 +1184,9 @@ button {
 
 .badge--1 {
 
-    top: 10%;
+    top: 15%;
 
-    right: 0;
+    right: 5%;
 
     animation: float-badge 3s ease-in-out infinite;
 
@@ -1164,9 +1194,9 @@ button {
 
 .badge--2 {
 
-    bottom: 25%;
+    bottom: 35%;
 
-    left: -10%;
+    left: 0%;
 
     animation: float-badge 3s ease-in-out infinite 0.5s;
 
@@ -1174,9 +1204,9 @@ button {
 
 .badge--3 {
 
-    bottom: 5%;
+    bottom: 15%;
 
-    right: 10%;
+    right: 15%;
 
     animation: float-badge 3s ease-in-out infinite 1s;
 
@@ -1294,7 +1324,7 @@ button {
 
     height: 280px;
 
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-md);
 
     object-fit: cover;
 
@@ -1316,7 +1346,7 @@ button {
 
     height: 100%;
 
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-md);
 
     border: 2px solid var(--primary);
 
@@ -1346,7 +1376,7 @@ button {
 
     background: var(--bg-card);
 
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-sm);
 
     border: 1px solid var(--border-color);
 
@@ -1614,7 +1644,7 @@ button {
 
     border: 1px solid var(--border-color);
 
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-sm);
 
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -1636,7 +1666,7 @@ button {
 
     inset: 0;
 
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-sm);
 
     background: radial-gradient(circle at center, rgba(115, 80, 255, 0.12), transparent 70%);
 
@@ -1670,26 +1700,23 @@ button {
 
 }
 
-.marquee-card img {
-
+.marquee-card img,
+.marquee-card i {
     width: 48px;
-
     height: 48px;
-
+    font-size: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: transform 0.35s ease;
-
     position: relative;
-
     z-index: 1;
-
 }
 
-.marquee-card:hover img {
-
+.marquee-card:hover img,
+.marquee-card:hover i {
     transform: scale(1.15);
-
     filter: drop-shadow(0 0 8px rgba(115, 80, 255, 0.4));
-
 }
 
 .marquee-card span {
@@ -1729,105 +1756,75 @@ button {
 }
 
 .skill-category-card {
-
     padding: var(--space-xl);
-
-    background: var(--gradient-card);
-
-    background-color: var(--bg-card);
-
+    background: var(--bg-card);
     border: 1px solid var(--border-color);
-
     border-radius: var(--radius-xl);
-
     transition: all var(--transition-base);
-
+    box-shadow: var(--shadow-sm);
 }
 
 .skill-category-card:hover {
+    border-color: rgba(115, 80, 255, 0.4);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
 
-    border-color: var(--primary);
-
-    transform: translateY(-5px);
-
-    box-shadow: var(--shadow-glow);
-
+.skill-category-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: var(--space-md);
 }
 
 .skill-category-icon {
-
-    width: 50px;
-
-    height: 50px;
-
+    width: 40px;
+    height: 40px;
     border-radius: var(--radius-md);
-
-    background: var(--gradient-primary);
-
+    background: rgba(115, 80, 255, 0.1);
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
-    margin-bottom: var(--space-lg);
-
+    color: var(--primary);
 }
 
 .skill-category-icon i {
-
     font-size: 1.5rem;
-
-    color: #fff;
-
 }
 
 .skill-category-title {
-
-    font-size: var(--fs-lg);
-
-    font-weight: 700;
-
-    margin-bottom: var(--space-md);
-
+    font-size: var(--fs-md);
+    font-weight: 600;
     color: var(--text-primary);
-
+    margin: 0;
 }
 
 .skill-category-list {
-
     display: flex;
-
     flex-direction: column;
-
-    gap: var(--space-sm);
-
+    gap: var(--space-md);
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .skill-category-list li {
-
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
     font-size: var(--fs-sm);
-
     color: var(--text-secondary);
-
-    padding-left: var(--space-lg);
-
-    position: relative;
-
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    line-height: 1.5;
 }
 
-.skill-category-list li::before {
-
-    content: '\25B9';
-
-    position: absolute;
-
-    left: 0;
-
+.skill-category-list li i {
     color: var(--primary);
-
-    font-weight: bold;
-
+    font-size: 1.25rem;
+    margin-top: 2px;
 }
 
 /* ===== PROJECTS SECTION ===== */
@@ -1864,7 +1861,7 @@ button {
 
     border: 1px solid var(--border-color);
 
-    border-radius: var(--radius-full);
+    border-radius: var(--radius-sm);
 
     cursor: pointer;
 
@@ -1910,7 +1907,7 @@ button {
 
     border: 1px solid rgba(245, 158, 11, 0.25);
 
-    border-radius: var(--radius-full);
+    border-radius: var(--radius-sm);
 
     font-family: var(--font-mono);
 
@@ -2228,7 +2225,7 @@ button {
 
     font-weight: 700;
 
-    border-radius: var(--radius-full);
+    border-radius: var(--radius-sm);
 
     display: flex;
 
@@ -2348,7 +2345,7 @@ button {
 
     border: 1px solid rgba(245, 158, 11, 0.2);
 
-    border-radius: var(--radius-full);
+    border-radius: var(--radius-sm);
 
 }
 
@@ -2672,7 +2669,7 @@ button {
 
     border: 1px solid rgba(115, 80, 255, 0.18);
 
-    border-radius: var(--radius-full);
+    border-radius: var(--radius-sm);
 
     font-family: var(--font-mono);
 
@@ -2746,7 +2743,7 @@ button {
 
     overflow: hidden;
 
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-sm);
 
 }
 
@@ -3053,7 +3050,7 @@ button {
 
     height: 8px;
 
-    border-radius: var(--radius-full);
+    border-radius: var(--radius-sm);
 
     background: var(--border-color);
 
@@ -3241,7 +3238,7 @@ button {
 
     height: 44px;
 
-    border-radius: var(--radius-full);
+    border-radius: var(--radius-sm);
 
     display: flex;
 
@@ -3369,7 +3366,7 @@ button {
 
     border: 1px solid var(--border-color);
 
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-md);
 
     padding: 0;
 
@@ -3650,7 +3647,7 @@ button {
 
     letter-spacing: 0.5px;
 
-    border-radius: var(--radius-full);
+    border-radius: var(--radius-sm);
 
     z-index: 2;
 
@@ -3793,7 +3790,7 @@ button {
 
     border: 1px solid rgba(255, 255, 255, 0.08);
 
-    border-radius: var(--radius-full);
+    border-radius: var(--radius-sm);
 
 }
 
@@ -3819,7 +3816,7 @@ button {
 
     border: 1px solid var(--border-color);
 
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-md);
 
     transition: all var(--transition-base);
 
@@ -4005,7 +4002,7 @@ button {
 
     border: 1px solid var(--border-color);
 
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-md);
 
     border-left: 4px solid var(--primary);
 
@@ -4127,7 +4124,7 @@ button {
 
     border: 1px solid var(--border-color);
 
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-sm);
 
     transition: all var(--transition-base);
 
@@ -4243,7 +4240,7 @@ button {
 
     border: 1px solid var(--border-color);
 
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-md);
 
 }
 
@@ -4654,36 +4651,32 @@ button {
     }
 
 
+    /* Tablet — hero pop-out (bottom-anchored) */
     .hero__image-wrapper {
-
-        width: 280px;
-
-        height: 280px;
-
+        width: 420px;
+        height: 440px;
+    }
+    /* Tablet — hero double-image pop-out */
+    .hero__circle {
+        bottom: 80px;
+        width: 230px;
+        height: 230px;
+    }
+    .hero__circle-crop {
+        bottom: 80px;
+        width: 230px;
+        height: 230px;
     }
 
     .hero__img {
-
-        width: 220px;
-
-        height: 220px;
-
+        width: 580px;
     }
-
-    .hero__image-ring {
-
-        width: 260px;
-
-        height: 260px;
-
+    .hero__img--inner {
+        bottom: 0px; 
     }
-
-    .hero__image-ring--2 {
-
-        width: 290px;
-
-        height: 290px;
-
+    .hero__img--outer {
+        bottom: 80px;
+        clip-path: inset(0 0 115px 0); /* 230 / 2 = 115px */
     }
 
     .about__container {
@@ -4774,11 +4767,16 @@ button {
 
     }
 
+    /* Floating badges scale down on mobile instead of hiding */
     .floating-badge {
-
-        display: none;
-
+        display: flex;
+        transform: scale(0.85);
+        padding: 0.4rem 0.8rem;
     }
+    .badge--1 { top: 8%; right: 0%; }
+    .badge--2 { bottom: 28%; left: -2%; }
+    .badge--3 { bottom: 5%; right: 8%; }
+
 
 }
 
@@ -4896,6 +4894,34 @@ button {
 
         display: none;
 
+    }
+
+    /* Mobile — hero pop-out (bottom-anchored) */
+    .hero__image-wrapper {
+        width: 360px;
+        height: 380px;
+    }
+    /* Mobile — hero double-image pop-out */
+    .hero__circle {
+        bottom: 60px;
+        width: 190px;
+        height: 190px;
+    }
+    .hero__circle-crop {
+        bottom: 60px;
+        width: 190px;
+        height: 190px;
+    }
+
+    .hero__img {
+        width: 480px;
+    }
+    .hero__img--inner {
+        bottom: 0px; 
+    }
+    .hero__img--outer {
+        bottom: 60px;
+        clip-path: inset(0 0 95px 0); /* 190 / 2 = 95px */
     }
 
     .top-card__body {
@@ -5044,6 +5070,7 @@ button {
     }
 
     .hero__cta .btn {
+    font-weight: 500;
 
         width: 100%;
 
@@ -5059,8 +5086,22 @@ button {
 
     .about__stats {
 
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+        padding: 0;
 
+
+    }
+    .stat-card {
+        padding: var(--space-sm);
+        border-radius: var(--radius-md);
+    }
+    .stat-number {
+        font-size: 1.5rem !important;
+    }
+    .stat-title {
+        font-size: 0.6rem !important;
+        padding: 0 0.1rem;
     }
 
     .timeline {
@@ -5187,7 +5228,7 @@ button {
 .cert-btn {
     width: 42px;
     height: 42px;
-    border-radius: var(--radius-full);
+    border-radius: var(--radius-sm);
     border: 1px solid var(--border-color);
     background: var(--bg-secondary);
     color: var(--text-secondary);
@@ -5216,7 +5257,7 @@ button {
 /* Track Wrapper — clipping container */
 .cert-carousel__track-wrapper {
     overflow: hidden;
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-md);
 }
 
 /* Track — scrollable flex row */
@@ -5233,7 +5274,7 @@ button {
     min-width: 0;
     background: var(--bg-secondary);
     border: 1px solid var(--border-color);
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-md);
     overflow: hidden;
     transition: all 0.4s ease;
     display: flex;
@@ -5310,7 +5351,7 @@ button {
     align-items: center;
     gap: 6px;
     padding: 0.5rem 1rem;
-    border-radius: var(--radius-full);
+    border-radius: var(--radius-sm);
     font-size: var(--fs-xs);
     font-weight: 700;
     text-decoration: none;
@@ -5391,7 +5432,7 @@ button {
 .cert-dot {
     width: 8px;
     height: 8px;
-    border-radius: var(--radius-full);
+    border-radius: var(--radius-sm);
     background: var(--border-color);
     border: none;
     cursor: pointer;
@@ -5438,7 +5479,7 @@ button {
     content: '';
     position: absolute;
     inset: 0;
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-md);
     background: linear-gradient(135deg,
             rgba(251, 191, 36, 0.04) 0%,
             transparent 60%);
