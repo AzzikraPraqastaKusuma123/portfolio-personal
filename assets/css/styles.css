@@ -761,29 +761,20 @@ button {
 }
 
 .hero__badge {
-
     display: inline-flex;
-
     align-items: center;
-
     gap: var(--space-sm);
-
-    padding: 0.4rem 1rem;
-
-    background: var(--bg-glass-strong);
-
-    border: 1px solid var(--border-color);
-
-    border-radius: var(--radius-md);
-
+    padding: 0.6rem 1.2rem;
+    background: linear-gradient(90deg, rgba(115, 80, 255, 0.15) 0%, rgba(115, 80, 255, 0.05) 100%);
+    border: 1.5px solid rgba(115, 80, 255, 0.4);
+    border-radius: var(--radius-full);
     font-size: var(--fs-sm);
-
-    color: var(--text-secondary);
-
+    color: var(--text-primary);
+    font-weight: 600;
     margin-bottom: var(--space-lg);
-
+    box-shadow: 0 0 20px rgba(115, 80, 255, 0.15);
+    backdrop-filter: blur(10px);
     animation: fadeInDown 0.8s ease;
-
 }
 
 .status-dot {
@@ -4671,6 +4662,10 @@ button {
     .hero__img {
         width: 580px;
     }
+    .hero__image-shadows {
+        width: 580px;
+        bottom: 80px;
+    }
     .hero__img--inner {
         bottom: 0px; 
     }
@@ -4915,6 +4910,10 @@ button {
 
     .hero__img {
         width: 480px;
+    }
+    .hero__image-shadows {
+        width: 480px;
+        bottom: 60px;
     }
     .hero__img--inner {
         bottom: 0px; 

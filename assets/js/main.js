@@ -1331,8 +1331,9 @@ function initCarousel() {
     const AUTO_SLIDE_DELAY = 4000; // 4 detik
 
     function startAutoSlide() {
-
         stopAutoSlide();
+        // Skip auto slide if we are in mobile/responsive view
+        if (window.innerWidth <= 768) return; 
 
         autoSlideTimer = setInterval(() => {
 
