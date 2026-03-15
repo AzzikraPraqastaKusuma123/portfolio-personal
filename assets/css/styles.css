@@ -1079,33 +1079,23 @@ button {
 }
 
 /* 
- * Shadow Wrapper explicitly for the pop-out image.
- * Uses a blurred version of the image underneath everything else 
- * to provide a solid drop shadow since the outer image is clipped.
+ * Shadow Layer
+ * Uses a real image placed underneath everything so its height matches exactly
  */
-.hero__image-shadows {
-    position: absolute;
+.hero__img--shadow {
     bottom: 100px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 650px;
-    height: 100%;
-    background-image: url('../img/perfil.png');
-    background-size: 100% auto;
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    filter: drop-shadow(0 -5px 25px rgba(115, 80, 255, 0.4)) blur(8px);
+    filter: drop-shadow(0 -5px 25px rgba(115, 80, 255, 0.6)) blur(8px);
     opacity: 0.6;
     z-index: 1;
 }
 
-/* Base properties for both inner and outer image */
+/* Base properties for ALL images (inner, outer, shadow) */
 .hero__img {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     width: 650px;
-    max-width: none !important; /* Forces inner image to ignore its small 260px parent and match outer image */
+    max-width: none !important; /* Keeps intrinsic scaling identical and prevents parent clipping resize */
     height: auto;
     object-fit: contain;
 }
@@ -4662,8 +4652,7 @@ button {
     .hero__img {
         width: 580px;
     }
-    .hero__image-shadows {
-        width: 580px;
+    .hero__img--shadow {
         bottom: 80px;
     }
     .hero__img--inner {
@@ -4911,8 +4900,7 @@ button {
     .hero__img {
         width: 480px;
     }
-    .hero__image-shadows {
-        width: 480px;
+    .hero__img--shadow {
         bottom: 60px;
     }
     .hero__img--inner {
