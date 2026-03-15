@@ -143,19 +143,19 @@
                         <div class="hero__image-glow"></div>
                         <div class="hero__image-ring"></div>
                         <div class="hero__image-ring hero__image-ring--2"></div>
-                        <!-- Shadow layer: an exact duplicate image placed behind everything, blurred and shifted slightly -->
-                        <img src="assets/img/perfil.png" alt="" class="hero__img hero__img--shadow">
-                        
                         <!-- Circle base (backdrop) -->
                         <div class="hero__circle"></div>
                         
-                        <!-- Inner image (perfectly cropped to the circle bottom) -->
-                        <div class="hero__circle-crop">
-                            <img src="assets/img/perfil.png" alt="Azzikra Praqasta" class="hero__img hero__img--inner">
-                        </div>
+                        <!-- Group the character parts to apply a single, perfect drop shadow on their combined shape -->
+                        <div class="hero__character-group">
+                            <!-- Inner image (perfectly cropped to the circle bottom) -->
+                            <div class="hero__circle-crop">
+                                <img src="assets/img/perfil.png" alt="Azzikra Praqasta" class="hero__img hero__img--inner">
+                            </div>
 
-                        <!-- Outer image (overlaps flawlessly, top half pops out freely) -->
-                        <img src="assets/img/perfil.png" alt="Azzikra Praqasta" class="hero__img hero__img--outer">
+                            <!-- Outer image (overlaps flawlessly, top half pops out freely) -->
+                            <img src="assets/img/perfil.png" alt="Azzikra Praqasta" class="hero__img hero__img--outer">
+                        </div>
                     </div>
                     <div class="floating-badge badge--1">
                         <i class='bx bx-code-alt'></i>
