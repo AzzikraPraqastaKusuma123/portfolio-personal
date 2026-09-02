@@ -23,6 +23,10 @@
     <!-- PDF.js for certificate preview -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo-praqasta.png">
+    <link rel="apple-touch-icon" href="logo-praqasta.png">
+
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/styles.css">
 
@@ -30,28 +34,39 @@
 </head>
 
 <body>
-    <!-- ===== PARTICLES CANVAS ===== -->
-    <canvas id="particles-canvas"></canvas>
+    <!-- ===== SCROLL PROGRESS ===== -->
+    <div class="scroll-progress" id="scroll-progress"></div>
 
     <!-- ===== HEADER / NAVBAR ===== -->
     <header class="header" id="header">
         <nav class="nav container">
             <a href="#home" class="nav__logo">
-                <span class="logo-bracket">&lt;</span>Azzikra<span class="logo-dot">.</span>dev<span
-                    class="logo-bracket">/&gt;</span>
+                <img src="logo-praqasta.png" alt="Azzikra Praqasta Kusuma" class="nav__logo-img">
             </a>
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link active-link" data-i18n="nav_home">Beranda</a>
+                    <li class="nav__item nav__item--dropdown">
+                        <button class="nav__link nav__dropdown-toggle">
+                            <span data-i18n="nav_home">Beranda</span> <i class='bx bx-chevron-down nav__dropdown-icon'></i>
+                        </button>
+                        <ul class="nav__dropdown">
+                            <li>
+                                <a href="#about" class="nav__dropdown-link" data-i18n="nav_about">
+                                    <i class='bx bx-user'></i> Tentang
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#education" class="nav__dropdown-link" data-i18n="nav_education">
+                                    <i class='bx bxs-graduation'></i> Pendidikan
+                                </a>
+                            </li>
+                        </ul>
                     </li>
-                    <li class="nav__item"><a href="#about" class="nav__link" data-i18n="nav_about">Tentang</a></li>
                     <li class="nav__item"><a href="#skills" class="nav__link" data-i18n="nav_skills">Keahlian</a></li>
                     <li class="nav__item"><a href="#projects" class="nav__link" data-i18n="nav_projects">Proyek</a></li>
                     <li class="nav__item"><a href="#experience" class="nav__link"
                             data-i18n="nav_experience">Pengalaman</a></li>
-                    <li class="nav__item"><a href="#education" class="nav__link"
-                            data-i18n="nav_education">Pendidikan</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link" data-i18n="nav_contact">Kontak</a></li>
                 </ul>
 
@@ -91,10 +106,6 @@
         <section class="hero section" id="home">
             <div class="hero__container container">
                 <div class="hero__data">
-                    <div class="hero__badge">
-                        <span class="status-dot"></span>
-                        <span data-i18n="hero_badge">Terbuka untuk peluang baru</span>
-                    </div>
                     <h1 class="hero__title">
                         <span data-i18n="hero_greeting">Halo, saya</span>
                         <span class="hero__name gradient-text">Azzikra Praqasta Kusuma</span>
@@ -114,7 +125,7 @@
                             <i class='bx bxl-whatsapp'></i>
                             <span data-i18n="hero_contact">Hubungi Saya</span>
                         </a>
-                        <a href="CV_ATS_Azzikra_Praqasta_Kusuma.pdf" download class="btn btn--outline">
+                        <a href="CV/CV_Azzikra_Praqasta_Kusuma_2026%20new.pdf" download class="btn btn--outline">
                             <i class='bx bx-download'></i>
                             <span>Download CV</span>
                         </a>
@@ -140,9 +151,6 @@
                 </div>
                 <div class="hero__image">
                     <div class="hero__image-wrapper">
-                        <div class="hero__image-glow"></div>
-                        <div class="hero__image-ring"></div>
-                        <div class="hero__image-ring hero__image-ring--2"></div>
                         <!-- Circle base (backdrop) -->
                         <div class="hero__circle"></div>
                         
@@ -168,6 +176,10 @@
                     <div class="floating-badge badge--3">
                         <i class='bx bx-palette'></i>
                         <span>UI/UX</span>
+                    </div>
+                    <div class="floating-badge badge--4">
+                        <i class='bx bx-support'></i>
+                        <span>IT Support</span>
                     </div>
                 </div>
             </div>
@@ -195,18 +207,27 @@
                         </div>
                         <div class="about__stats">
                             <div class="stat-item">
-                                <span class="stat-number" data-count="3">0</span>
-                                <span class="stat-plus">+</span>
+                                <i class='bx bx-briefcase stat-icon'></i>
+                                <div>
+                                    <span class="stat-number" data-count="3">0</span>
+                                    <span class="stat-plus">+</span>
+                                </div>
                                 <span class="stat-label" data-i18n="about_stat_years">Tahun Pengalaman</span>
                             </div>
                             <div class="stat-item">
-                                <span class="stat-number" data-count="15">0</span>
-                                <span class="stat-plus">+</span>
+                                <i class='bx bx-task stat-icon'></i>
+                                <div>
+                                    <span class="stat-number" data-count="15">0</span>
+                                    <span class="stat-plus">+</span>
+                                </div>
                                 <span class="stat-label" data-i18n="about_stat_projects">Proyek Selesai</span>
                             </div>
                             <div class="stat-item">
-                                <span class="stat-number" data-count="22">0</span>
-                                <span class="stat-plus">+</span>
+                                <i class='bx bx-award stat-icon'></i>
+                                <div>
+                                    <span class="stat-number" data-count="22">0</span>
+                                    <span class="stat-plus">+</span>
+                                </div>
                                 <span class="stat-label" data-i18n="about_stat_certs">Sertifikasi</span>
                             </div>
                         </div>
@@ -215,11 +236,10 @@
                         <h3 class="about__name">Azzikra Praqasta Kusuma</h3>
                         <p class="about__role gradient-text" data-i18n="about_role">Full Stack Web Developer</p>
                         <p class="about__text" data-i18n="about_text_1">
-                            Mahasiswa Semester 8 S1 Sistem Informasi Universitas Mercu Buana (IPK 3.55/4.00) yang
+                            Lulusan S1 Sistem Informasi Universitas Mercu Buana (IPK 3.55/4.00) yang
                             adaptif, cepat belajar, dan memiliki ketertarikan kuat pada pemecahan masalah melalui
-                            teknologi.
-                            Berpengalaman lebih dari 3 tahun di pengembangan aplikasi web full stack dengan Node.js,
-                            Express.js, React.js, serta integrasi database MySQL/SQL dan RESTful API.
+                            teknologi. Berpengalaman lebih dari 3 tahun di pengembangan aplikasi web full stack
+                            dengan Node.js, Express.js, React.js, serta integrasi database MySQL/SQL dan RESTful API.
                         </p>
                         <p class="about__text" data-i18n="about_text_2">
                             Saya juga memiliki pengalaman sebagai IT Support dan Guru TIK, sehingga terbiasa
@@ -915,6 +935,46 @@
                     <div class="section__line"></div>
                 </div>
                 <div class="timeline">
+                    <!-- Experience BARU — IT Support PT. ITSJ (PALING TERKINI) -->
+                    <div class="timeline__item" data-type="internship">
+                        <div class="timeline__dot">
+                            <i class='bx bx-support'></i>
+                        </div>
+                        <div class="timeline__content">
+                            <div class="timeline__top-line"></div>
+                            <div class="timeline__img-wrapper">
+                                <img src="assets/img/work/work5.png" alt="PT. Info Tech Support Jabodetabek"
+                                    class="timeline__company-img">
+                                <div class="timeline__img-overlay"></div>
+                                <span class="timeline__status timeline__status--latest">
+                                    <i class='bx bx-radio-circle-marked'></i>
+                                    <span>Terbaru</span>
+                                </span>
+                            </div>
+                            <div class="timeline__body">
+                                <h3 class="timeline__title" data-i18n="exp_itsj_title">IT Support</h3>
+                                <span class="timeline__company">PT. Info Tech Support Jabodetabek &middot; Part-time</span>
+                                <span class="timeline__location"><i class='bx bx-map-pin'></i> Joglo, Jakarta Barat &middot; On-site</span>
+                                <p class="timeline__desc" data-i18n="exp_itsj_desc">Bertanggung jawab dalam pemeliharaan dan dukungan infrastruktur IT di beberapa institusi pendidikan termasuk TK, SD, SMP, dan SMA Al Azhar Kembangan serta Yayasan Al Ikhwan.</p>
+                                <ul class="timeline__list">
+                                    <li data-i18n="exp_itsj_r1">Melakukan pemeliharaan dan <em>troubleshooting</em> PC, printer, dan perangkat jaringan di ruang kelas, ruang guru, dan area administrasi.</li>
+                                    <li data-i18n="exp_itsj_r2">Mengelola infrastruktur jaringan termasuk router <em>MikroTik</em> dan <em>access point</em> UniFi untuk konektivitas stabil dan andal.</li>
+                                    <li data-i18n="exp_itsj_r3">Melakukan pemeliharaan server dan memantau kinerja sistem untuk meminimalkan <em>downtime</em>.</li>
+                                    <li data-i18n="exp_itsj_r4">Membuat dan mengelola laporan tiket untuk masalah perangkat keras (PC &amp; printer) dan jaringan.</li>
+                                    <li data-i18n="exp_itsj_r5">Menyiapkan laporan pemeliharaan rutin (mingguan dan semesteran) untuk pelacakan kinerja dan dokumentasi.</li>
+                                    <li data-i18n="exp_itsj_r6">Memberikan dukungan teknis dan penyelesaian cepat untuk masalah perangkat keras dan jaringan.</li>
+                                </ul>
+                            </div>
+                            <div class="timeline__footer">
+                                <span class="timeline__date">
+                                    <i class='bx bx-calendar'></i>
+                                    <span data-exp-start="Apr 2026">Apr 2026 – Sekarang</span>
+                                </span>
+                                <span class="timeline__duration" data-start-date="2026-04-01">6 Bulan</span>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Experience 0 — Freelance Web Developer -->
                     <div class="timeline__item" data-type="freelance">
                         <div class="timeline__dot">
@@ -928,10 +988,6 @@
                                     <span>Freelance</span>
                                 </div>
                                 <div class="timeline__img-overlay"></div>
-                                <span class="timeline__status timeline__status--latest">
-                                    <i class='bx bx-radio-circle-marked'></i>
-                                    <span data-i18n="exp_status_latest">Terbaru</span>
-                                </span>
                             </div>
                             <div class="timeline__body">
                                 <h3 class="timeline__title" data-i18n="exp_5_title">Freelance Web Developer</h3>
@@ -944,9 +1000,9 @@
                             <div class="timeline__footer">
                                 <span class="timeline__date">
                                     <i class='bx bx-calendar'></i>
-                                    <span data-i18n="exp_5_date">Agustus 2025 – Sekarang</span>
+                                    <span data-exp-start-id="Agustus 2025" data-exp-start-en="August 2025">Agustus 2025 – Sekarang</span>
                                 </span>
-                                <span class="timeline__duration" data-i18n="exp_5_duration">7 Bulan</span>
+                                <span class="timeline__duration" data-start-date="2025-08-01">13 Bulan</span>
                             </div>
                         </div>
                     </div>
@@ -1021,7 +1077,7 @@
                                 <div class="timeline__img-overlay"></div>
                             </div>
                             <div class="timeline__body">
-                                <h3 class="timeline__title">IT Staff</h3>
+                                <h3 class="timeline__title" data-i18n="exp_itstaff_title">IT Staff</h3>
                                 <span class="timeline__company">Dinas Pendidikan Provinsi DKI Jakarta</span>
                                 <p class="timeline__desc" data-i18n="exp_1_desc">Pemeliharaan infrastruktur IT,
                                     troubleshooting jaringan, dan dukungan teknis untuk sistem administrasi
@@ -1085,10 +1141,10 @@
                         <h3 class="edu-card__title">Universitas Mercu Buana</h3>
                         <p class="edu-card__faculty" data-i18n="edu_faculty">Fakultas Ilmu Komputer – S1 Sistem
                             Informasi</p>
-                        <p class="edu-card__year">2022 – <span data-i18n="edu_present">Sekarang</span></p>
+                        <p class="edu-card__year">2022 – <span data-i18n="edu_present">2026</span></p>
                         <div class="edu-card__gpa">
                             <span class="gpa-label">IPK</span>
-                            <span class="gpa-value">3.55 / 4.00</span>
+                            <span class="gpa-value">3.57 / 4.00</span>
                         </div>
                     </div>
                     <div class="edu-card">
@@ -1843,48 +1899,80 @@
                     <h2 class="section__title" data-i18n="contact_title">Hubungi Saya</h2>
                     <div class="section__line"></div>
                 </div>
+
+                <!-- Availability Banner -->
+                <div class="contact__availability">
+                    <span class="contact__avail-dot"></span>
+                    <div class="contact__avail-text">
+                        <strong data-i18n="contact_avail_status">Tersedia untuk Peluang Baru</strong>
+                        <span data-i18n="contact_avail_desc">Full-time &bull; Freelance &bull; Kolaborasi Proyek</span>
+                    </div>
+                </div>
+
                 <div class="contact__container">
+                    <!-- Left: Info + Socials -->
                     <div class="contact__info">
-                        <div class="contact__info-card">
-                            <i class='bx bx-map'></i>
-                            <div>
-                                <h4 data-i18n="contact_location_label">Lokasi</h4>
-                                <p>Gg. H. Asmar II No.1, Kembangan Selatan, Jakarta Barat</p>
-                            </div>
+                        <div class="contact__intro-block">
+                            <i class='bx bx-chat'></i>
+                            <p data-i18n="contact_intro">Punya proyek atau ide yang ingin diwujudkan? Hubungi saya — saya membalas dalam <strong>24 jam</strong>.</p>
                         </div>
-                        <div class="contact__info-card">
-                            <i class='bx bx-phone'></i>
-                            <div>
-                                <h4 data-i18n="contact_phone_label">Telepon</h4>
-                                <p>+62 813-1644-3334</p>
-                            </div>
+
+                        <div class="contact__details">
+                            <a href="https://maps.google.com/?q=Kembangan+Jakarta+Barat" target="_blank" class="contact__detail-item">
+                                <div class="contact__detail-icon">
+                                    <i class='bx bx-map'></i>
+                                </div>
+                                <div>
+                                    <span class="contact__detail-label" data-i18n="contact_location_label">Lokasi</span>
+                                    <p class="contact__detail-value">Jakarta Barat, Indonesia</p>
+                                </div>
+                            </a>
+                            <a href="tel:+6281316443334" class="contact__detail-item">
+                                <div class="contact__detail-icon">
+                                    <i class='bx bx-phone'></i>
+                                </div>
+                                <div>
+                                    <span class="contact__detail-label" data-i18n="contact_phone_label">Telepon</span>
+                                    <p class="contact__detail-value">+62 813-1644-3334</p>
+                                </div>
+                            </a>
+                            <a href="mailto:azzikrapraqasta1@gmail.com" class="contact__detail-item">
+                                <div class="contact__detail-icon">
+                                    <i class='bx bx-envelope'></i>
+                                </div>
+                                <div>
+                                    <span class="contact__detail-label">Email</span>
+                                    <p class="contact__detail-value">azzikrapraqasta1@gmail.com</p>
+                                </div>
+                            </a>
                         </div>
-                        <div class="contact__info-card">
-                            <i class='bx bx-envelope'></i>
-                            <div>
-                                <h4>Email</h4>
-                                <p>azzikrapraqasta1@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="contact__socials">
-                            <a href="https://azzikrapraqastakusuma123.github.io/portfolio-personal/" target="_blank"
-                                class="contact-social-link">
-                                <i class='bx bx-globe'></i> Portfolio
+
+                        <div class="contact__socials-grid">
+                            <a href="https://www.linkedin.com/in/azzikra-praqasta-kusuma-198774271/" target="_blank" class="contact__social-btn contact__social-btn--linkedin">
+                                <i class='bx bxl-linkedin'></i>
+                                <span>LinkedIn</span>
                             </a>
-                            <a href="https://www.linkedin.com/in/azzikra-praqasta-kusuma-198774271/" target="_blank"
-                                class="contact-social-link">
-                                <i class='bx bxl-linkedin'></i> LinkedIn
+                            <a href="https://github.com/azzikrapraqastakusuma123" target="_blank" class="contact__social-btn contact__social-btn--github">
+                                <i class='bx bxl-github'></i>
+                                <span>GitHub</span>
                             </a>
-                            <a href="https://github.com/azzikrapraqastakusuma123" target="_blank"
-                                class="contact-social-link">
-                                <i class='bx bxl-github'></i> GitHub
+                            <a href="https://t.me/MONKEYBOYYYY666" target="_blank" class="contact__social-btn contact__social-btn--telegram">
+                                <i class='bx bxl-telegram'></i>
+                                <span>Telegram</span>
                             </a>
-                            <a href="https://t.me/MONKEYBOYYYY666" target="_blank" class="contact-social-link">
-                                <i class='bx bxl-telegram'></i> Telegram
+                            <a href="https://azzikrapraqastakusuma123.github.io/portfolio-personal/" target="_blank" class="contact__social-btn contact__social-btn--portfolio">
+                                <i class='bx bx-globe'></i>
+                                <span>Portfolio</span>
                             </a>
                         </div>
                     </div>
+
+                    <!-- Right: Form -->
                     <div class="contact__form-wrapper">
+                        <div class="contact__form-header">
+                            <i class='bx bx-send'></i>
+                            <h3 data-i18n="contact_form_title">Kirim Pesan</h3>
+                        </div>
                         <form class="contact__form" id="contact-form">
                             <div class="form-group">
                                 <input type="text" id="contact-name" placeholder=" " required>
@@ -1899,7 +1987,7 @@
                                 <label for="contact-message" data-i18n="form_message">Pesan</label>
                             </div>
                             <button type="submit" class="btn btn--primary btn--full">
-                                <i class='bx bx-send'></i>
+                                <i class='bx bx-paper-plane'></i>
                                 <span data-i18n="form_submit">Kirim Pesan</span>
                             </button>
                         </form>
@@ -1915,8 +2003,7 @@
             <div class="footer__content">
                 <div class="footer__brand">
                     <a href="#home" class="footer__logo">
-                        <span class="logo-bracket">&lt;</span>Azzikra<span class="logo-dot">.</span>dev<span
-                            class="logo-bracket">/&gt;</span>
+                        <img src="logo-praqasta.png" alt="Azzikra Praqasta Kusuma" class="footer__logo-img">
                     </a>
                     <p class="footer__text" data-i18n="footer_text">Membangun solusi digital yang membawa dampak nyata.
                     </p>
@@ -1950,9 +2037,50 @@
         <i class='bx bx-up-arrow-alt'></i>
     </button>
 
+    <!-- ===== COMMAND MENU (CTRL+K) ===== -->
+    <div class="cmd-menu" id="cmd-menu">
+        <div class="cmd-menu__backdrop" id="cmd-menu-close"></div>
+        <div class="cmd-menu__container">
+            <div class="cmd-menu__search">
+                <i class='bx bx-search'></i>
+                <input type="text" id="cmd-menu-input" placeholder="Ketik perintah atau pencarian..." autocomplete="off">
+                <span class="cmd-menu__shortcut">ESC</span>
+            </div>
+            <div class="cmd-menu__list" id="cmd-menu-list">
+                <div class="cmd-menu__group">Navigasi</div>
+                <button class="cmd-menu__item" data-action="scroll" data-target="#home">
+                    <i class='bx bx-home'></i><span>Beranda</span>
+                </button>
+                <button class="cmd-menu__item" data-action="scroll" data-target="#about">
+                    <i class='bx bx-user'></i><span>Tentang Saya</span>
+                </button>
+                <button class="cmd-menu__item" data-action="scroll" data-target="#projects">
+                    <i class='bx bx-briefcase'></i><span>Lihat Proyek</span>
+                </button>
+                <button class="cmd-menu__item" data-action="scroll" data-target="#contact">
+                    <i class='bx bx-envelope'></i><span>Hubungi Saya</span>
+                </button>
+                <div class="cmd-menu__group">Aksi</div>
+                <button class="cmd-menu__item" data-action="theme">
+                    <i class='bx bx-moon'></i><span>Ubah Tema (Dark/Light)</span>
+                </button>
+                <a href="CV/CV_Azzikra_Praqasta_Kusuma_2026%20new.pdf" download class="cmd-menu__item">
+                    <i class='bx bx-download'></i><span>Download CV</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- ===== SCROLL REVEAL ===== -->
     <script src="https://unpkg.com/scrollreveal"></script>
-    <!-- ===== MAIN JS ===== -->
+
+    <!-- Custom Magnetic Cursor -->
+    <div class="custom-cursor" id="custom-cursor"></div>
+    <div class="custom-cursor-follower" id="custom-cursor-follower"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="assets/js/i18n.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 

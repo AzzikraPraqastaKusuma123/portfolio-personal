@@ -56,7 +56,7 @@ const translations = {
 
         about_role: "Full Stack Web Developer",
 
-        about_text_1: "Mahasiswa Semester 8 S1 Sistem Informasi Universitas Mercu Buana (IPK 3.55/4.00) yang adaptif, cepat belajar, dan memiliki ketertarikan kuat pada pemecahan masalah melalui teknologi. Berpengalaman lebih dari 3 tahun di pengembangan aplikasi web full stack dengan Node.js, Express.js, React.js, serta integrasi database MySQL/SQL dan RESTful API.",
+        about_text_1: "Lulusan S1 Sistem Informasi Universitas Mercu Buana (IPK 3.55/4.00) yang adaptif, cepat belajar, dan memiliki ketertarikan kuat pada pemecahan masalah melalui teknologi. Berpengalaman lebih dari 3 tahun di pengembangan aplikasi web full stack dengan Node.js, Express.js, React.js, serta integrasi database MySQL/SQL dan RESTful API.",
 
         about_text_2: "Saya juga memiliki pengalaman sebagai Freelance Web Developer, IT Support dan Guru TIK, sehingga terbiasa menjembatani kebutuhan bisnis, user non-teknis, dan solusi teknis. Terbiasa bekerja secara kolaboratif maupun mandiri, mengelola proyek menggunakan Trello & GitHub, serta menjaga komunikasi yang jelas dengan stakeholder untuk menghadirkan solusi yang efektif, scalable, dan ramah pengguna.",
 
@@ -170,6 +170,8 @@ const translations = {
 
         exp_2_duration: "2 Bulan",
 
+        exp_itstaff_title: "Staf IT",
+
         exp_3_title: "Anggota Divisi Pendidikan",
 
         exp_3_desc: "Mengkoordinasikan kegiatan edukasi, seminar teknologi, dan pelatihan keterampilan untuk anggota himpunan.",
@@ -241,6 +243,36 @@ const translations = {
         form_message: "Pesan",
 
         form_submit: "Kirim Pesan",
+
+        contact_avail_status: "Tersedia untuk Peluang Baru",
+
+        contact_avail_desc: "Full-time \u2022 Freelance \u2022 Kolaborasi Proyek",
+
+        contact_intro: "Punya proyek atau ide yang ingin diwujudkan? Hubungi saya \u2014 saya membalas dalam 24 jam.",
+
+        contact_form_title: "Kirim Pesan",
+
+        // IT Support ITSJ
+
+        exp_itsj_title: "IT Support",
+
+        exp_itsj_desc: "Bertanggung jawab dalam pemeliharaan dan dukungan infrastruktur IT di beberapa institusi pendidikan termasuk TK, SD, SMP, dan SMA Al Azhar Kembangan serta Yayasan Al Ikhwan.",
+
+        exp_itsj_r1: "Melakukan pemeliharaan dan troubleshooting PC, printer, dan perangkat jaringan di ruang kelas, ruang guru, dan area administrasi.",
+
+        exp_itsj_r2: "Mengelola infrastruktur jaringan termasuk router MikroTik dan access point UniFi untuk konektivitas stabil dan andal.",
+
+        exp_itsj_r3: "Melakukan pemeliharaan server dan memantau kinerja sistem untuk meminimalkan downtime.",
+
+        exp_itsj_r4: "Membuat dan mengelola laporan tiket untuk masalah perangkat keras (PC & printer) dan jaringan.",
+
+        exp_itsj_r5: "Menyiapkan laporan pemeliharaan rutin (mingguan dan semesteran) untuk pelacakan kinerja dan dokumentasi.",
+
+        exp_itsj_r6: "Memberikan dukungan teknis dan penyelesaian cepat untuk masalah perangkat keras dan jaringan.",
+
+        exp_present: "Sekarang",
+
+        exp_month: "Bulan",
 
         // Footer
 
@@ -316,7 +348,7 @@ const translations = {
 
         about_role: "Full Stack Web Developer",
 
-        about_text_1: "8th semester student of S1 Information Systems at Mercu Buana University (GPA 3.55/4.00), adaptive, fast learner, with a strong interest in problem-solving through technology. Over 3 years of experience in full stack web application development with Node.js, Express.js, React.js, as well as MySQL/SQL database integration and RESTful APIs.",
+        about_text_1: "Graduate of S1 Information Systems at Mercu Buana University (GPA 3.55/4.00), adaptive, fast learner, with a strong interest in problem-solving through technology. Over 3 years of experience in full stack web application development with Node.js, Express.js, React.js, as well as MySQL/SQL database integration and RESTful APIs.",
 
         about_text_2: "I also have experience as a Freelance Web Developer, IT Support and ICT Teacher, making me accustomed to bridging business needs, non-technical users, and technical solutions. Used to working both collaboratively and independently, managing projects using Trello & GitHub, and maintaining clear communication with stakeholders to deliver effective, scalable, and user-friendly solutions.",
 
@@ -430,6 +462,8 @@ const translations = {
 
         exp_2_duration: "2 Months",
 
+        exp_itstaff_title: "IT Staff",
+
         exp_3_title: "Education Division Member",
 
         exp_3_desc: "Coordinated educational activities, tech seminars, and skills training for association members.",
@@ -502,6 +536,36 @@ const translations = {
 
         form_submit: "Send Message",
 
+        contact_avail_status: "Open to New Opportunities",
+
+        contact_avail_desc: "Full-time \u2022 Freelance \u2022 Project Collaboration",
+
+        contact_intro: "Have a project or idea you want to bring to life? Contact me \u2014 I reply within 24 hours.",
+
+        contact_form_title: "Send a Message",
+
+        // IT Support ITSJ
+
+        exp_itsj_title: "IT Support",
+
+        exp_itsj_desc: "Responsible for maintaining and supporting IT infrastructure across educational institutions including TK, SD, SMP, and SMA Al Azhar Kembangan, as well as Yayasan Al Ikhwan.",
+
+        exp_itsj_r1: "Perform maintenance and troubleshooting for PCs, printers, and network devices across classrooms, teacher offices, and administrative areas.",
+
+        exp_itsj_r2: "Manage network infrastructure including MikroTik routers and UniFi access points to ensure stable and reliable connectivity.",
+
+        exp_itsj_r3: "Handle server maintenance and monitor system performance to minimize downtime.",
+
+        exp_itsj_r4: "Create and manage ticketing reports for hardware (PC & printer) and network issues.",
+
+        exp_itsj_r5: "Prepare routine maintenance reports (weekly and biannual) for performance tracking and documentation.",
+
+        exp_itsj_r6: "Provide technical support and quick resolution for hardware and network-related problems.",
+
+        exp_present: "Present",
+
+        exp_month: "Month",
+
         // Footer
 
         footer_text: "Building digital solutions that make a real impact.",
@@ -550,7 +614,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initNavigation();
 
-    initParticles();
+    initNavDropdown();
 
     initTypewriter();
 
@@ -567,6 +631,19 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollReveal();
 
     initContactForm();
+
+    // New premium features
+    initScrollProgress();
+
+    initCommandMenu();
+
+    initEasterEgg();
+
+    initCardSpotlight();
+
+    initCustomCursor();
+
+    initHackerScramble();
 
 });
 
@@ -703,6 +780,17 @@ function setLanguage(lang) {
     // Update html lang
 
     document.documentElement.lang = lang;
+
+    // Update specific logic for Present dates
+    document.querySelectorAll('[data-exp-start], [data-exp-start-id]').forEach(el => {
+        const startId = el.dataset.expStartId || el.dataset.expStart;
+        const startEn = el.dataset.expStartEn || el.dataset.expStart;
+        const start = lang === 'id' ? startId : startEn;
+        el.textContent = `${start} – ${t.exp_present}`;
+    });
+
+    // Update all duration elements
+    initExperienceDuration();
 
     // Restart typewriter
 
@@ -844,138 +932,249 @@ function initNavigation() {
 
 }
 
-// ===== PARTICLES BACKGROUND =====
+// ===== NAV DROPDOWN =====
 
-function initParticles() {
+function initNavDropdown() {
 
-    const canvas = document.getElementById('particles-canvas');
+    const toggle = document.querySelector('.nav__dropdown-toggle');
 
-    if (!canvas) return;
+    const dropdown = document.querySelector('.nav__dropdown');
 
-    const ctx = canvas.getContext('2d');
+    if (!toggle || !dropdown) return;
 
-    let particles = [];
+    // Mobile: klik toggle buka/tutup accordion
+    toggle.addEventListener('click', (e) => {
 
-    let animationId;
+        if (window.innerWidth <= 768) {
 
-    function resize() {
+            e.stopPropagation();
 
-        canvas.width = window.innerWidth;
+            const isOpen = dropdown.classList.contains('show');
 
-        canvas.height = window.innerHeight;
+            dropdown.classList.toggle('show', !isOpen);
 
-    }
-
-    function createParticles() {
-
-        particles = [];
-
-        const count = Math.min(80, Math.floor(window.innerWidth / 15));
-
-        for (let i = 0; i < count; i++) {
-
-            particles.push({
-
-                x: Math.random() * canvas.width,
-
-                y: Math.random() * canvas.height,
-
-                vx: (Math.random() - 0.5) * 0.3,
-
-                vy: (Math.random() - 0.5) * 0.3,
-
-                radius: Math.random() * 1.5 + 0.5,
-
-                opacity: Math.random() * 0.5 + 0.1
-
-            });
+            toggle.classList.toggle('open', !isOpen);
 
         }
 
-    }
+    });
 
-    function drawParticles() {
+    // Tutup dropdown & mobile menu saat klik link di dalamnya
+    dropdown.querySelectorAll('.nav__dropdown-link').forEach(link => {
 
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        link.addEventListener('click', () => {
 
-        particles.forEach((p, i) => {
+            dropdown.classList.remove('show');
 
-            // Move
+            toggle.classList.remove('open');
 
-            p.x += p.vx;
+            const navMenu = document.getElementById('nav-menu');
 
-            p.y += p.vy;
-
-            // Wrap
-
-            if (p.x < 0) p.x = canvas.width;
-
-            if (p.x > canvas.width) p.x = 0;
-
-            if (p.y < 0) p.y = canvas.height;
-
-            if (p.y > canvas.height) p.y = 0;
-
-            // Draw particle
-
-            ctx.beginPath();
-
-            ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-
-            ctx.fillStyle = `rgba(115, 80, 255, ${p.opacity})`;
-
-            ctx.fill();
-
-            // Draw connections
-
-            for (let j = i + 1; j < particles.length; j++) {
-
-                const p2 = particles[j];
-
-                const dx = p.x - p2.x;
-
-                const dy = p.y - p2.y;
-
-                const dist = Math.sqrt(dx * dx + dy * dy);
-
-                if (dist < 120) {
-
-                    ctx.beginPath();
-
-                    ctx.moveTo(p.x, p.y);
-
-                    ctx.lineTo(p2.x, p2.y);
-
-                    ctx.strokeStyle = `rgba(115, 80, 255, ${0.08 * (1 - dist / 120)})`;
-
-                    ctx.lineWidth = 0.5;
-
-                    ctx.stroke();
-
-                }
-
-            }
+            if (navMenu) navMenu.classList.remove('show-menu');
 
         });
 
-        animationId = requestAnimationFrame(drawParticles);
+    });
 
-    }
+    // Klik di luar dropdown → tutup
+    document.addEventListener('click', (e) => {
 
-    resize();
+        if (!e.target.closest('.nav__item--dropdown')) {
 
-    createParticles();
+            dropdown.classList.remove('show');
 
-    drawParticles();
+            toggle.classList.remove('open');
 
-    window.addEventListener('resize', () => {
-
-        resize();
-
-        createParticles();
+        }
 
     });
 
+}
+
+// ===== SCROLL PROGRESS =====
+function initScrollProgress() {
+    const progressBar = document.getElementById('scroll-progress');
+    if (!progressBar) return;
+
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (scrollTop / scrollHeight) * 100;
+        progressBar.style.width = scrolled + '%';
+    });
+}
+
+// ===== COMMAND MENU =====
+function initCommandMenu() {
+    const cmdMenu = document.getElementById('cmd-menu');
+    const cmdMenuInput = document.getElementById('cmd-menu-input');
+    const cmdMenuClose = document.getElementById('cmd-menu-close');
+    if (!cmdMenu) return;
+
+    // Toggle menu
+    const toggleMenu = (show) => {
+        if (show) {
+            cmdMenu.classList.add('active');
+            setTimeout(() => cmdMenuInput.focus(), 100);
+        } else {
+            cmdMenu.classList.remove('active');
+            cmdMenuInput.value = '';
+        }
+    };
+
+    // Keyboard shortcut (Ctrl+K or Cmd+K)
+    document.addEventListener('keydown', (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+            e.preventDefault();
+            toggleMenu(!cmdMenu.classList.contains('active'));
+        }
+        if (e.key === 'Escape' && cmdMenu.classList.contains('active')) {
+            toggleMenu(false);
+        }
+    });
+
+    if (cmdMenuClose) {
+        cmdMenuClose.addEventListener('click', () => toggleMenu(false));
+    }
+
+    // Handle clicks on items
+    const items = cmdMenu.querySelectorAll('.cmd-menu__item');
+    items.forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            const action = item.dataset.action;
+            
+            if (action === 'scroll') {
+                const target = document.querySelector(item.dataset.target);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            } else if (action === 'theme') {
+                const themeToggle = document.getElementById('theme-toggle');
+                if (themeToggle) themeToggle.click();
+            } else if (item.hasAttribute('download')) {
+                window.location.href = item.getAttribute('href');
+            }
+            toggleMenu(false);
+        });
+    });
+}
+
+// ===== EASTER EGG =====
+function initEasterEgg() {
+    console.log(
+        "%c \u2728 You found the secret console! \u2728",
+        "color: #0070f3; font-size: 20px; font-weight: bold; background: #000; padding: 10px; border-radius: 5px;"
+    );
+    console.log(
+        "%cI see you're inspecting my code. Let's connect! Email me at azzikrapraqasta1@gmail.com",
+        "color: #10b981; font-size: 14px;"
+    );
+}
+
+// ===== CARD SPOTLIGHT EFFECT & TILT =====
+function initCardSpotlight() {
+    const cards = document.querySelectorAll('.top-card, .carousel-card, .skill-category-card, .org-card');
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            card.style.setProperty('--mouse-x', `${x}px`);
+            card.style.setProperty('--mouse-y', `${y}px`);
+        });
+    });
+
+    // Initialize VanillaTilt if available
+    if (typeof VanillaTilt !== 'undefined') {
+        VanillaTilt.init(document.querySelectorAll(".top-card, .carousel-card"), {
+            max: 10,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.2
+        });
+    }
+}
+
+// ===== CUSTOM MAGNETIC CURSOR =====
+function initCustomCursor() {
+    const cursor = document.getElementById('custom-cursor');
+    const follower = document.getElementById('custom-cursor-follower');
+    if (!cursor || !follower) return;
+
+    let posX = 0, posY = 0;
+    let mouseX = 0, mouseY = 0;
+
+    // Throttle cursor movement for performance
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        cursor.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
+    });
+
+    // Smooth follower animation using requestAnimationFrame
+    const updateFollower = () => {
+        posX += (mouseX - posX) * 0.15; // easing
+        posY += (mouseY - posY) * 0.15;
+        follower.style.transform = `translate3d(${posX}px, ${posY}px, 0) translate(-50%, -50%)`;
+        requestAnimationFrame(updateFollower);
+    };
+    requestAnimationFrame(updateFollower);
+
+    // Magnetic / Hover state on interactive elements
+    const interactables = document.querySelectorAll('a, button, input, textarea, select, .nav__toggle, .nav__close, .top-card, .carousel-card');
+    
+    interactables.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            cursor.classList.add('hover');
+            follower.classList.add('hover');
+        });
+        el.addEventListener('mouseleave', () => {
+            cursor.classList.remove('hover');
+            follower.classList.remove('hover');
+        });
+    });
+}
+
+// ===== HACKER TEXT SCRAMBLE =====
+function initHackerScramble() {
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const nameElement = document.querySelector('.hero__name');
+    if (!nameElement) return;
+
+    let interval = null;
+    const originalText = nameElement.innerText; // "Azzikra Praqasta Kusuma"
+
+    const startScramble = () => {
+        let iteration = 0;
+        clearInterval(interval);
+        
+        interval = setInterval(() => {
+            nameElement.innerText = originalText
+                .split("")
+                .map((letter, index) => {
+                    if (letter === " ") return " ";
+                    if (index < iteration) {
+                        return originalText[index];
+                    }
+                    return letters[Math.floor(Math.random() * 26)];
+                })
+                .join("");
+
+            if (iteration >= originalText.length) {
+                clearInterval(interval);
+            }
+            
+            // Adjust speed of descrambling
+            iteration += 1 / 3;
+        }, 30);
+    };
+
+    // Scramble on hover
+    nameElement.addEventListener("mouseover", startScramble);
+    
+    // Scramble once on load
+    setTimeout(startScramble, 500);
 }
 
 // ===== TYPEWRITER EFFECT =====
@@ -1775,3 +1974,26 @@ function initContactForm() {
     if (section) observer.observe(section);
 
 })();
+
+// ===== EXPERIENCE DURATION CALCULATOR =====
+function initExperienceDuration() {
+    const durationElements = document.querySelectorAll('[data-start-date]');
+    const t = translations[currentLang];
+
+    durationElements.forEach(el => {
+        const startDateStr = el.dataset.startDate; // "YYYY-MM-DD"
+        const startDate = new Date(startDateStr);
+        const endDate = new Date(); // Today
+
+        let months = (endDate.getFullYear() - startDate.getFullYear()) * 12;
+        months += endDate.getMonth() - startDate.getMonth();
+        
+        // Include start month as month 1
+        months += 1;
+        
+        if (months <= 0) months = 1;
+        
+        const suffix = " " + t.exp_month + (currentLang === 'en' && months > 1 ? 's' : '');
+        el.textContent = months + suffix;
+    });
+}
