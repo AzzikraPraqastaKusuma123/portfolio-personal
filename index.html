@@ -73,6 +73,16 @@
                 <div class="nav__close" id="nav-close">
                     <i class='bx bx-x'></i>
                 </div>
+
+                <!-- Language Switcher Mobile -->
+                <div class="lang-switcher lang-switcher-mobile">
+                    <button class="lang-btn active" data-lang="id" title="Bahasa Indonesia">
+                        <span>ID</span>
+                    </button>
+                    <button class="lang-btn" data-lang="en" title="English">
+                        <span>EN</span>
+                    </button>
+                </div>
             </div>
 
             <div class="nav__actions">
@@ -99,6 +109,9 @@
         </nav>
     </header>
 
+    <!-- Nav overlay for mobile menu backdrop -->
+    <div class="nav__overlay" id="nav-overlay"></div>
+
     <!-- ===== MAIN CONTENT ===== -->
     <main class="main">
 
@@ -114,7 +127,7 @@
                     <p class="hero__description" data-i18n="hero_description">
                         Insinyur perangkat lunak &amp; IT Support dengan 3+ tahun membangun solusi web full stack,
                         mengelola infrastruktur server, dan merancang pengalaman digital yang intuitif.
-                        Dari baris kode hingga kabel jaringan — saya hadir untuk membuat teknologi bekerja lebih baik.
+                        Dari baris kode hingga kabel jaringan, saya hadir untuk membuat teknologi bekerja lebih baik.
                     </p>
                     <div class="hero__cta">
                         <a href="https://wa.me/6281316443334" class="btn btn--primary" target="_blank">

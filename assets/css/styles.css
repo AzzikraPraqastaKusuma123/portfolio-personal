@@ -1070,12 +1070,17 @@ button {
     letter-spacing: -2px;
     margin-bottom: var(--space-xl);
     text-transform: uppercase;
+    /* Prevent any overflow on the title container */
+    overflow: hidden;
 }
 
 .editorial-line {
     display: block;
     color: var(--text-primary);
     animation: fadeInUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) both;
+    /* Prevent line from overflowing */
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .editorial-line:nth-child(1) { animation-delay: 0.1s; }
@@ -1088,6 +1093,9 @@ button {
     letter-spacing: 0;
     margin-top: var(--space-sm);
     animation-delay: 0.3s;
+    /* Typewriter line: allow text to fit naturally */
+    white-space: nowrap;
+    overflow: visible;
 }
 
 .hero__description {
@@ -1164,7 +1172,7 @@ button {
 
     transform: translateY(-3px);
 
-    box-shadow: 0 8px 25px rgba(115, 80, 255, 0.3);
+    box-shadow: 0 8px 25px rgba(255, 59, 48, 0.3);
 
 }
 
@@ -1289,7 +1297,7 @@ button {
     height: 100%;
     z-index: 3;
     pointer-events: none;
-    filter: drop-shadow(0 -5px 25px rgba(115, 80, 255, 0.5));
+    filter: drop-shadow(0 -8px 30px rgba(255, 59, 48, 0.35));
 }
 
 /* Base properties for ALL images (inner, outer, shadow) */
@@ -1714,12 +1722,13 @@ button {
 }
 
 .about__role {
-
     font-size: var(--fs-lg);
-
     font-weight: 600;
-
     margin-bottom: var(--space-lg);
+    /* Ensure typewriter role text doesn't overflow */
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
 
 }
 
@@ -1772,19 +1781,15 @@ button {
 /* Marquee Wrapper */
 
 .marquee-wrapper {
-
     display: flex;
-
     flex-direction: column;
-
     gap: var(--space-lg);
-
     margin-bottom: var(--space-3xl);
-
     overflow: hidden;
-
     position: relative;
-
+    /* Hard clamp to viewport width — prevents mobile horizontal overflow */
+    max-width: 100vw;
+    width: 100%;
 }
 
 /* Fade edges for premium look */
@@ -1951,7 +1956,7 @@ button {
 
     border-radius: var(--radius-sm);
 
-    background: radial-gradient(circle at center, rgba(115, 80, 255, 0.12), transparent 70%);
+    background: radial-gradient(circle at center, rgba(255, 59, 48, 0.12), transparent 70%);
 
     opacity: 0;
 
@@ -1975,9 +1980,9 @@ button {
 
     box-shadow:
 
-        0 0 20px rgba(115, 80, 255, 0.2),
+        0 0 20px rgba(255, 59, 48, 0.2),
 
-        0 0 40px rgba(115, 80, 255, 0.1),
+        0 0 40px rgba(255, 59, 48, 0.1),
 
         0 10px 30px rgba(0, 0, 0, 0.3);
 
@@ -1999,7 +2004,7 @@ button {
 .marquee-card:hover img,
 .marquee-card:hover i {
     transform: scale(1.15);
-    filter: drop-shadow(0 0 8px rgba(115, 80, 255, 0.4));
+    filter: drop-shadow(0 0 8px rgba(255, 59, 48, 0.4));
 }
 
 .marquee-card span {
@@ -2048,7 +2053,7 @@ button {
 }
 
 .skill-category-card:hover {
-    border-color: rgba(115, 80, 255, 0.4);
+    border-color: rgba(255, 59, 48, 0.4);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
@@ -2066,7 +2071,7 @@ button {
     width: 40px;
     height: 40px;
     border-radius: var(--radius-md);
-    background: rgba(115, 80, 255, 0.1);
+    background: rgba(255, 59, 48, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2170,7 +2175,7 @@ button {
 
     border-color: transparent;
 
-    box-shadow: 0 4px 15px rgba(115, 80, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(255, 59, 48, 0.3);
 
 }
 
@@ -2276,12 +2281,12 @@ button {
 
     transform: translateY(-10px);
 
-    border-color: rgba(115, 80, 255, 0.4);
+    border-color: rgba(255, 59, 48, 0.4);
 
     box-shadow:
         0 20px 60px rgba(0, 0, 0, 0.3),
-        0 0 30px rgba(115, 80, 255, 0.15),
-        0 0 60px rgba(115, 80, 255, 0.05);
+        0 0 30px rgba(255, 59, 48, 0.15),
+        0 0 60px rgba(255, 59, 48, 0.05);
 
 }
 
@@ -2374,7 +2379,7 @@ button {
 
 .top-card:hover .top-card__number {
 
-    -webkit-text-stroke: 1px rgba(115, 80, 255, 0.15);
+    -webkit-text-stroke: 1px rgba(255, 59, 48, 0.15);
 
     transform: translateY(-5px);
 
@@ -2488,7 +2493,7 @@ button {
 
     background: linear-gradient(135deg, var(--primary), var(--accent));
 
-    box-shadow: 0 4px 15px rgba(115, 80, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(255, 59, 48, 0.3);
 
 }
 
@@ -2594,9 +2599,9 @@ button {
 
     color: var(--primary-light);
 
-    background: rgba(115, 80, 255, 0.08);
+    background: rgba(255, 59, 48, 0.08);
 
-    border: 1px solid rgba(115, 80, 255, 0.18);
+    border: 1px solid rgba(255, 59, 48, 0.18);
 
     border-radius: var(--radius-full);
 
@@ -2700,7 +2705,7 @@ button {
 
     padding: 0 var(--space-md);
 
-    background: rgba(115, 80, 255, 0.04);
+    background: rgba(255, 59, 48, 0.04);
 
     border-radius: var(--radius-md);
 
@@ -2766,9 +2771,9 @@ button {
 
     color: var(--primary-light);
 
-    background: rgba(115, 80, 255, 0.08);
+    background: rgba(255, 59, 48, 0.08);
 
-    border: 1px solid rgba(115, 80, 255, 0.18);
+    border: 1px solid rgba(255, 59, 48, 0.18);
 
 }
 
@@ -2850,9 +2855,9 @@ button {
 
     color: var(--primary);
 
-    background: rgba(115, 80, 255, 0.06);
+    background: rgba(255, 59, 48, 0.06);
 
-    border: 1px solid rgba(115, 80, 255, 0.15);
+    border: 1px solid rgba(255, 59, 48, 0.15);
 
     border-radius: var(--radius-md);
 
@@ -2876,13 +2881,13 @@ button {
 
 .top-card__toggle:hover {
 
-    background: rgba(115, 80, 255, 0.12);
+    background: rgba(255, 59, 48, 0.12);
 
     border-color: var(--primary);
 
     color: var(--primary-light);
 
-    box-shadow: 0 4px 15px rgba(115, 80, 255, 0.15);
+    box-shadow: 0 4px 15px rgba(255, 59, 48, 0.15);
 
 }
 
@@ -2948,9 +2953,9 @@ button {
 
     color: var(--primary-light);
 
-    background: rgba(115, 80, 255, 0.08);
+    background: rgba(255, 59, 48, 0.08);
 
-    border: 1px solid rgba(115, 80, 255, 0.18);
+    border: 1px solid rgba(255, 59, 48, 0.18);
 
     border-radius: var(--radius-sm);
 
@@ -3006,7 +3011,7 @@ button {
 
     transform: scale(1.05);
 
-    box-shadow: 0 4px 15px rgba(115, 80, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(255, 59, 48, 0.3);
 
 }
 
@@ -3215,7 +3220,7 @@ button {
 
     color: #fff;
 
-    background: rgba(115, 80, 255, 0.85);
+    background: rgba(255, 59, 48, 0.85);
 
     border-radius: var(--radius-sm);
 
@@ -3305,9 +3310,9 @@ button {
 
     color: var(--primary-light);
 
-    background: rgba(115, 80, 255, 0.08);
+    background: rgba(255, 59, 48, 0.08);
 
-    border: 1px solid rgba(115, 80, 255, 0.15);
+    border: 1px solid rgba(255, 59, 48, 0.15);
 
     border-radius: var(--radius-sm);
 
@@ -3379,7 +3384,7 @@ button {
 
 [data-theme="light"] .top-card__details {
 
-    background: rgba(115, 80, 255, 0.03);
+    background: rgba(255, 59, 48, 0.03);
 
 }
 
@@ -3444,9 +3449,9 @@ button {
     transform: translateX(-50%);
 
     background: linear-gradient(to bottom,
-            rgba(115, 80, 255, 0.12),
+            rgba(255, 59, 48, 0.12),
             rgba(236, 72, 153, 0.08),
-            rgba(115, 80, 255, 0.12));
+            rgba(255, 59, 48, 0.12));
 
     filter: blur(8px);
 
@@ -3565,7 +3570,7 @@ button {
 
     background: linear-gradient(135deg, var(--primary), #8b5cf6);
 
-    box-shadow: 0 0 20px rgba(115, 80, 255, 0.3);
+    box-shadow: 0 0 20px rgba(255, 59, 48, 0.3);
 
 }
 
@@ -3717,11 +3722,11 @@ button {
 
 [data-type="internship"] .timeline__content:hover {
 
-    border-color: rgba(115, 80, 255, 0.4);
+    border-color: rgba(255, 59, 48, 0.4);
 
     box-shadow:
         0 15px 40px rgba(0, 0, 0, 0.2),
-        0 0 25px rgba(115, 80, 255, 0.12);
+        0 0 25px rgba(255, 59, 48, 0.12);
 
 }
 
@@ -4251,7 +4256,7 @@ button {
 
     padding: var(--space-sm) var(--space-md);
 
-    background: rgba(115, 80, 255, 0.1);
+    background: rgba(255, 59, 48, 0.1);
 
     border-radius: var(--radius-md);
 
@@ -4792,7 +4797,7 @@ button {
 
     border-color: var(--primary);
 
-    box-shadow: 0 0 0 3px rgba(115, 80, 255, 0.1);
+    box-shadow: 0 0 0 3px rgba(255, 59, 48, 0.1);
 
 }
 
@@ -5034,7 +5039,7 @@ button {
 
     transition: all var(--transition-base);
 
-    box-shadow: 0 4px 20px rgba(115, 80, 255, 0.3);
+    box-shadow: 0 4px 20px rgba(255, 59, 48, 0.3);
 
 }
 
@@ -5052,7 +5057,7 @@ button {
 
     transform: translateY(-5px);
 
-    box-shadow: 0 8px 30px rgba(115, 80, 255, 0.5);
+    box-shadow: 0 8px 30px rgba(255, 59, 48, 0.5);
 
 }
 
@@ -5294,16 +5299,10 @@ button {
 
     }
 
-    /* Floating badges scale down on mobile instead of hiding */
+    /* Hide floating badges on tablet/mobile — they overlap and break layout */
     .floating-badge {
-        display: flex;
-        transform: scale(0.85);
-        padding: 0.4rem 0.8rem;
+        display: none !important;
     }
-    .badge--1 { top: 8%; right: 0%; }
-    .badge--2 { bottom: 28%; left: -2%; }
-    .badge--3 { bottom: 5%; right: 8%; }
-
 
 }
 
@@ -5324,37 +5323,39 @@ button {
     }
 
     .nav__menu {
-
         position: fixed;
-
         top: 0;
-
         right: -100%;
-
         width: 80%;
-
-        max-width: 320px;
-
+        max-width: 300px;
         height: 100vh;
-
         background: var(--bg-secondary);
-
         border-left: 1px solid var(--border-color);
-
         padding: 5rem 2rem 2rem;
-
-        transition: right var(--transition-base);
-
-        z-index: 1000;
-
-        backdrop-filter: blur(20px);
-
+        transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1001;
+        box-shadow: -8px 0 30px rgba(0, 0, 0, 0.4);
     }
 
     .nav__menu.show-menu {
-
         right: 0;
+    }
 
+    /* Backdrop overlay for mobile nav */
+    .nav__overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 1000;
+        opacity: 0;
+        transition: opacity 0.35s ease;
+        backdrop-filter: blur(4px);
+    }
+
+    .nav__overlay.show-overlay {
+        display: block;
+        opacity: 1;
     }
 
     .nav__list {
@@ -5402,13 +5403,42 @@ button {
     }
 
     .hero {
-
         padding-top: calc(var(--header-height) + 1rem);
-
         min-height: auto;
-
         padding-bottom: var(--space-3xl);
+        overflow-x: hidden;
+    }
 
+    .hero__container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--space-xl);
+        overflow-x: hidden;
+    }
+
+    .hero__data {
+        order: 2;
+    }
+
+    /* Hero title: reduce letter-spacing so typewriter fits in single line */
+    .hero__title--editorial {
+        letter-spacing: -1px;
+    }
+
+    .accent-line {
+        font-size: clamp(1rem, 4.5vw, 1.3rem);
+        letter-spacing: 0;
+        white-space: nowrap;
+        overflow: visible;
+    }
+
+    .hero__image {
+        order: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        overflow: hidden;
     }
 
     .hero__badge {
@@ -5423,47 +5453,34 @@ button {
 
     }
 
-    /* Mobile — hero pop-out (bottom-anchored) */
+    /* Mobile — hero image wrapper: smaller, centered, no overflow */
     .hero__image-wrapper {
-        width: 360px;
-        height: 380px;
+        width: min(280px, 80vw);
+        height: min(300px, 85vw);
+        margin: 0 auto;
+        position: relative;
     }
-    /* Mobile — hero double-image pop-out */
+    /* Mobile — circle */
     .hero__circle {
-        bottom: 60px;
-        width: 190px;
-        height: 190px;
+        bottom: 45px;
+        width: min(160px, 45vw);
+        height: min(160px, 45vw);
     }
     .hero__circle-crop {
-        bottom: 60px;
-        width: 190px;
-        height: 190px;
-    }
-    .hero__image-glow {
         bottom: 45px;
-        width: 220px;
-        height: 220px;
-    }
-    .hero__image-ring {
-        bottom: 35px;
-        width: 240px;
-        height: 240px;
-    }
-    .hero__image-ring--2 {
-        bottom: 20px;
-        width: 270px;
-        height: 270px;
+        width: min(160px, 45vw);
+        height: min(160px, 45vw);
     }
 
     .hero__img {
-        width: 480px;
+        width: min(390px, 110vw);
     }
     .hero__img--inner {
-        bottom: 0px; 
+        bottom: 0px;
     }
     .hero__img--outer {
-        bottom: 60px;
-        clip-path: inset(0 0 95px 0); /* 190 / 2 = 95px */
+        bottom: 45px;
+        clip-path: inset(0 0 80px 0);
     }
 
     .top-card__body {
@@ -5592,11 +5609,63 @@ button {
 @media screen and (max-width: 480px) {
 
     :root {
-
         --fs-4xl: 1.75rem;
-
         --fs-5xl: 2rem;
+    }
 
+    /* Ensure body doesn't overflow on small screens */
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Hero title: scale down and remove letter-spacing so text doesn't clip */
+    .hero__title--editorial {
+        font-size: clamp(1.8rem, 9vw, 2.4rem);
+        letter-spacing: -0.5px;
+        line-height: 1.05;
+    }
+
+    /* Allow editorial lines to wrap on very small screens if needed */
+    .editorial-line {
+        font-size: inherit;
+        overflow: visible;
+        white-space: normal;
+    }
+
+    /* Typewriter accent line: use smaller font + no overflow clip */
+    .accent-line {
+        font-size: clamp(0.85rem, 4vw, 1.1rem);
+        letter-spacing: 0;
+        overflow: visible;
+        white-space: nowrap;
+    }
+
+    /* Hero description smaller on small screens */
+    .hero__description {
+        font-size: var(--fs-sm);
+        padding: 0 var(--space-sm);
+    }
+
+    /* Hero image even smaller on very small screens */
+    .hero__image-wrapper {
+        width: min(240px, 75vw);
+        height: min(260px, 80vw);
+    }
+
+    .hero__circle,
+    .hero__circle-crop {
+        width: min(130px, 38vw);
+        height: min(130px, 38vw);
+        bottom: 38px;
+    }
+
+    .hero__img {
+        width: min(330px, 95vw);
+    }
+
+    .hero__img--outer {
+        bottom: 38px;
+        clip-path: inset(0 0 65px 0);
     }
 
     .container {
@@ -5786,7 +5855,7 @@ button {
     background: var(--primary);
     border-color: var(--primary);
     color: #fff;
-    box-shadow: 0 0 15px rgba(115, 80, 255, 0.3);
+    box-shadow: 0 0 15px rgba(255, 59, 48, 0.3);
     transform: scale(1.08);
 }
 
@@ -5824,11 +5893,11 @@ button {
 }
 
 .cert-card:hover {
-    border-color: rgba(115, 80, 255, 0.4);
+    border-color: rgba(255, 59, 48, 0.4);
     transform: translateY(-6px);
     box-shadow:
         0 20px 50px rgba(0, 0, 0, 0.25),
-        0 0 25px rgba(115, 80, 255, 0.1);
+        0 0 25px rgba(255, 59, 48, 0.1);
 }
 
 /* PDF Preview */
@@ -5985,7 +6054,7 @@ button {
 .cert-dot.active {
     background: var(--primary);
     width: 24px;
-    box-shadow: 0 0 10px rgba(115, 80, 255, 0.4);
+    box-shadow: 0 0 10px rgba(255, 59, 48, 0.4);
 }
 
 .cert-dot:hover:not(.active) {

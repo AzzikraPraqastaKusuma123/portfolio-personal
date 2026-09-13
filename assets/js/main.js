@@ -799,38 +799,43 @@ function initNavigation() {
 
     const navLinks = document.querySelectorAll('.nav__link');
 
+    const navOverlay = document.getElementById('nav-overlay');
+
+    function openMenu() {
+        navMenu.classList.add('show-menu');
+        if (navOverlay) {
+            navOverlay.style.display = 'block';
+            setTimeout(() => navOverlay.classList.add('show-overlay'), 10);
+        }
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+        navMenu.classList.remove('show-menu');
+        if (navOverlay) {
+            navOverlay.classList.remove('show-overlay');
+            setTimeout(() => { navOverlay.style.display = 'none'; }, 350);
+        }
+        document.body.style.overflow = '';
+    }
+
     // Mobile menu toggle
-
     if (navToggle) {
-
-        navToggle.addEventListener('click', () => {
-
-            navMenu.classList.add('show-menu');
-
-        });
-
+        navToggle.addEventListener('click', openMenu);
     }
 
     if (navClose) {
+        navClose.addEventListener('click', closeMenu);
+    }
 
-        navClose.addEventListener('click', () => {
-
-            navMenu.classList.remove('show-menu');
-
-        });
-
+    // Close menu when clicking overlay
+    if (navOverlay) {
+        navOverlay.addEventListener('click', closeMenu);
     }
 
     // Close menu on link click
-
     navLinks.forEach(link => {
-
-        link.addEventListener('click', () => {
-
-            navMenu.classList.remove('show-menu');
-
-        });
-
+        link.addEventListener('click', closeMenu);
     });
 
     // Header scroll effect
