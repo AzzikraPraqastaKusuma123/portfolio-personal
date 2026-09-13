@@ -134,7 +134,7 @@
                             <i class='bx bxl-whatsapp'></i>
                             <span data-i18n="hero_contact">Hubungi Saya</span>
                         </a>
-                        <a href="CV/CV_Azzikra_Praqasta_Kusuma_2026%20new.pdf" download class="btn btn--outline">
+                        <a id="cv-download-btn" href="CV/CV_Azzikra_Praqasta_Kusuma_ATS.pdf" download class="btn btn--outline">
                             <i class='bx bx-download'></i>
                             <span>Download CV</span>
                         </a>
@@ -1214,6 +1214,30 @@
                     <div class="cert-carousel__track-wrapper">
                         <div class="cert-carousel__track" id="certTrack">
 
+                            <!-- Card 0: BNSP (paling utama) -->
+                            <div class="cert-card">
+                                <div class="cert-card__preview">
+                                    <canvas class="cert-canvas"
+                                        data-pdf="assets/sertifikat/BNSP_Sertifikat_Azzikra_Praqasta_Kusuma_41822010100.pdf"></canvas>
+                                    <div class="cert-card__loading"><i class='bx bx-loader-alt bx-spin'></i></div>
+                                    <div class="cert-card__overlay">
+                                        <a href="assets/sertifikat/BNSP_Sertifikat_Azzikra_Praqasta_Kusuma_41822010100.pdf"
+                                            target="_blank" class="cert-action-btn cert-action-btn--view">
+                                            <i class='bx bx-show'></i> <span data-i18n="cert_view">Lihat</span>
+                                        </a>
+                                        <a href="assets/sertifikat/BNSP_Sertifikat_Azzikra_Praqasta_Kusuma_41822010100.pdf"
+                                            download class="cert-action-btn cert-action-btn--download">
+                                            <i class='bx bx-download'></i> <span data-i18n="cert_download">Unduh</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="cert-card__info">
+                                    <span class="cert-card__issuer"><i class='bx bx-badge-check'></i> BNSP & LSP UMB</span>
+                                    <h4 class="cert-card__name">Sertifikat Kompetensi BNSP: Perekayasa Perangkat Lunak</h4>
+                                    <span class="cert-card__year">2026</span>
+                                </div>
+                            </div>
+
                             <!-- Card 1: TOEFL -->
                             <div class="cert-card">
                                 <div class="cert-card__preview">
@@ -1237,6 +1261,7 @@
                                     <span class="cert-card__year">2024</span>
                                 </div>
                             </div>
+
 
                             <!-- Card 2: Ethical Hacker -->
                             <div class="cert-card">

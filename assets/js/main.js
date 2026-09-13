@@ -785,6 +785,16 @@ function setLanguage(lang) {
         window.heroTypewriterInstance.updateRoles(t.hero_roles || ["FULL STACK ENGINEER."]);
     }
 
+    // Update CV download button based on active language
+    const cvBtn = document.getElementById('cv-download-btn');
+    if (cvBtn) {
+        if (lang === 'en') {
+            cvBtn.href = 'CV/CV_Azzikra_Praqasta_Kusuma_ATS_EN.pdf';
+        } else {
+            cvBtn.href = 'CV/CV_Azzikra_Praqasta_Kusuma_ATS.pdf';
+        }
+    }
+
 }
 
 // ===== NAVIGATION =====

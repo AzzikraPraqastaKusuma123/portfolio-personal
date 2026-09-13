@@ -5333,7 +5333,8 @@ button {
         border-left: 1px solid var(--border-color);
         padding: 5rem 2rem 2rem;
         transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-        z-index: 1001;
+        /* Above header (1000) so menu content is on top */
+        z-index: 1002;
         box-shadow: -8px 0 30px rgba(0, 0, 0, 0.4);
     }
 
@@ -5341,16 +5342,16 @@ button {
         right: 0;
     }
 
-    /* Backdrop overlay for mobile nav */
+    /* Backdrop overlay for mobile nav — must sit BELOW header (z:1000) so header stays sharp */
     .nav__overlay {
         display: none;
         position: fixed;
         inset: 0;
-        background: rgba(0, 0, 0, 0.6);
-        z-index: 1000;
+        background: rgba(0, 0, 0, 0.65);
+        z-index: 999;
         opacity: 0;
         transition: opacity 0.35s ease;
-        backdrop-filter: blur(4px);
+        /* No backdrop-filter here — it would blur the header above it */
     }
 
     .nav__overlay.show-overlay {
