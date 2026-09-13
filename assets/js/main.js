@@ -36,7 +36,7 @@ const translations = {
 
         hero_greeting: "Halo, saya",
 
-        hero_description: "Full Stack Developer & Tech Enthusiast dengan 3+ tahun pengalaman membangun aplikasi web modern, desain UI/UX, eksplorasi IoT, dan AI Automation. Terbiasa merancang solusi digital yang scalable, berdampak nyata, dan user-centric untuk kebutuhan bisnis modern.",
+        hero_description: "Insinyur perangkat lunak & IT Support dengan 3+ tahun membangun solusi web full stack, mengelola infrastruktur server, dan merancang pengalaman digital yang intuitif. Dari baris kode hingga kabel jaringan, saya hadir untuk membuat teknologi bekerja lebih baik.",
 
         hero_contact: "Hubungi Saya",
 
@@ -56,11 +56,11 @@ const translations = {
 
         about_role: "Full Stack Web Developer",
 
-        about_text_1: "Lulusan S1 Sistem Informasi Universitas Mercu Buana (IPK 3.55/4.00) yang adaptif, cepat belajar, dan memiliki ketertarikan kuat pada pemecahan masalah melalui teknologi. Berpengalaman lebih dari 3 tahun di pengembangan aplikasi web full stack dengan Node.js, Express.js, React.js, serta integrasi database MySQL/SQL dan RESTful API.",
+        about_text_1: "Lulusan S1 Sistem Informasi Universitas Mercu Buana (IPK 3.57/4.00) yang adaptif, cepat belajar, dan memiliki ketertarikan kuat pada pemecahan masalah melalui teknologi. Berpengalaman lebih dari 3 tahun di pengembangan aplikasi web full stack dengan Node.js, Express.js, React.js, serta integrasi database MySQL/SQL dan RESTful API.",
 
-        about_text_2: "Saya juga memiliki pengalaman sebagai Freelance Web Developer, IT Support dan Guru TIK, sehingga terbiasa menjembatani kebutuhan bisnis, user non-teknis, dan solusi teknis. Terbiasa bekerja secara kolaboratif maupun mandiri, mengelola proyek menggunakan Trello & GitHub, serta menjaga komunikasi yang jelas dengan stakeholder untuk menghadirkan solusi yang efektif, scalable, dan ramah pengguna.",
+        about_text_2: "Selain pengembangan perangkat lunak, saya juga berpengalaman sebagai IT Support dan System Administrator. Terbiasa mengelola server virtualisasi (Proxmox, Docker), infrastruktur jaringan, serta menjembatani kebutuhan bisnis antara pengguna non-teknis dengan solusi teknis yang efisien.",
 
-        about_gpa: "IPK 3.55 / 4.00",
+        about_gpa: "IPK 3.57 / 4.00",
 
         // Skills
 
@@ -202,7 +202,7 @@ const translations = {
 
         edu_faculty: "Fakultas Ilmu Komputer – S1 Sistem Informasi",
 
-        edu_present: "Sekarang",
+        edu_present: "2026",
 
         cert_title: "Bahasa & Sertifikasi",
 
@@ -248,7 +248,7 @@ const translations = {
 
         contact_avail_desc: "Full-time \u2022 Freelance \u2022 Kolaborasi Proyek",
 
-        contact_intro: "Punya proyek atau ide yang ingin diwujudkan? Hubungi saya \u2014 saya membalas dalam 24 jam.",
+        contact_intro: "Punya proyek atau ide yang ingin diwujudkan? Hubungi saya, saya membalas dalam 24 jam.",
 
         contact_form_title: "Kirim Pesan",
 
@@ -286,24 +286,19 @@ const translations = {
 
         read_less: "Sembunyikan",
 
-        // Typewriter roles
-
+        // Typewriter roles (About section)
         typewriter_roles: [
-
-            "Full Stack Developer",
-
-            "Backend Developer",
-
-            "IT Support Specialist",
-
-            "UI/UX Enthusiast",
-
-            "React.js Developer"
-
+            "Full Stack Web Developer",
+            "IT Support"
+        ],
+        // Hero big typewriter
+        hero_roles: [
+            "FULL STACK ENGINEER.",
+            "IT SUPPORT.",
+            "UI/UX DESIGNER.",
+            "DEVOPS ENGINEER."
         ]
-
     },
-
     en: {
 
         // Navigation
@@ -328,7 +323,7 @@ const translations = {
 
         hero_greeting: "Hello, I'm",
 
-        hero_description: "Full Stack Developer & Tech Enthusiast with 3+ years of experience building modern web apps, UI/UX design, IoT exploration, and AI Automation. Passionate about crafting scalable, impactful, and user-centric digital solutions for modern business needs.",
+        hero_description: "Software Engineer & IT Support with 3+ years building full stack web solutions, managing server infrastructure, and crafting intuitive digital experiences. From code to network cables, I make technology work smarter.",
 
         hero_contact: "Contact Me",
 
@@ -348,11 +343,11 @@ const translations = {
 
         about_role: "Full Stack Web Developer",
 
-        about_text_1: "Graduate of S1 Information Systems at Mercu Buana University (GPA 3.55/4.00), adaptive, fast learner, with a strong interest in problem-solving through technology. Over 3 years of experience in full stack web application development with Node.js, Express.js, React.js, as well as MySQL/SQL database integration and RESTful APIs.",
+        about_text_1: "Graduate of S1 Information Systems at Mercu Buana University (GPA 3.57/4.00), adaptive, fast learner, with a strong interest in problem-solving through technology. Over 3 years of experience in full stack web application development with Node.js, Express.js, React.js, as well as MySQL/SQL database integration and RESTful APIs.",
 
-        about_text_2: "I also have experience as a Freelance Web Developer, IT Support and ICT Teacher, making me accustomed to bridging business needs, non-technical users, and technical solutions. Used to working both collaboratively and independently, managing projects using Trello & GitHub, and maintaining clear communication with stakeholders to deliver effective, scalable, and user-friendly solutions.",
+        about_text_2: "Beyond software development, I also have experience as an IT Support and System Administrator. Proficient in managing virtualization servers (Proxmox, Docker), network infrastructure, and bridging technical solutions with non-technical business needs.",
 
-        about_gpa: "GPA 3.55 / 4.00",
+        about_gpa: "GPA 3.57 / 4.00",
 
         // Skills
 
@@ -494,7 +489,7 @@ const translations = {
 
         edu_faculty: "Faculty of Computer Science – S1 Information Systems",
 
-        edu_present: "Present",
+        edu_present: "2026",
 
         cert_title: "Language & Certifications",
 
@@ -540,7 +535,7 @@ const translations = {
 
         contact_avail_desc: "Full-time \u2022 Freelance \u2022 Project Collaboration",
 
-        contact_intro: "Have a project or idea you want to bring to life? Contact me \u2014 I reply within 24 hours.",
+        contact_intro: "Have a project or idea you want to bring to life? Contact me, I reply within 24 hours.",
 
         contact_form_title: "Send a Message",
 
@@ -578,24 +573,19 @@ const translations = {
 
         read_less: "Show Less",
 
-        // Typewriter roles
-
+        // Typewriter roles (About section)
         typewriter_roles: [
-
-            "Full Stack Developer",
-
-            "Backend Developer",
-
-            "IT Support Specialist",
-
-            "UI/UX Enthusiast",
-
-            "React.js Developer"
-
+            "Full Stack Web Developer",
+            "IT Support"
+        ],
+        // Hero big typewriter
+        hero_roles: [
+            "FULL STACK ENGINEER.",
+            "IT SUPPORT.",
+            "UI/UX DESIGNER.",
+            "DEVOPS ENGINEER."
         ]
-
     }
-
 };
 
 // ===== STATE =====
@@ -616,8 +606,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initNavDropdown();
 
-    initTypewriter();
-
     initScrollEffects();
 
     initProjectToggles();
@@ -637,13 +625,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initCommandMenu();
 
-    initEasterEgg();
+    initTypewriter();
 
-    initCardSpotlight();
-
-    initCustomCursor();
-
-    initHackerScramble();
+    initHeroTypewriter();
 
 });
 
@@ -792,12 +776,13 @@ function setLanguage(lang) {
     // Update all duration elements
     initExperienceDuration();
 
-    // Restart typewriter
-
+    // Update typewriter roles on language change
     if (window.typewriterInstance) {
-
-        window.typewriterInstance.updateRoles(t.typewriter_roles);
-
+        window.typewriterInstance.updateRoles(t.typewriter_roles || ["Full Stack Web Developer"]);
+    }
+    // Update hero typewriter roles on language change
+    if (window.heroTypewriterInstance) {
+        window.heroTypewriterInstance.updateRoles(t.hero_roles || ["FULL STACK ENGINEER."]);
     }
 
 }
@@ -1178,11 +1163,8 @@ function initHackerScramble() {
 }
 
 // ===== TYPEWRITER EFFECT =====
-
 function initTypewriter() {
-
-    const element = document.getElementById('typewriter');
-
+    const element = document.getElementById('about-typewriter');
     if (!element) return;
 
     const t = translations[currentLang];
@@ -1263,6 +1245,58 @@ function initTypewriter() {
 
     };
 
+}
+
+// ===== HERO TYPEWRITER EFFECT =====
+function initHeroTypewriter() {
+    const element = document.getElementById('hero-typewriter');
+    if (!element) return;
+
+    const t = translations[currentLang];
+    let roles = t.hero_roles || ['FULL STACK ENGINEER.'];
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let timeout;
+
+    function type() {
+        const currentRole = roles[roleIndex];
+
+        if (isDeleting) {
+            element.textContent = currentRole.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            element.textContent = currentRole.substring(0, charIndex + 1);
+            charIndex++;
+        }
+
+        let speed = isDeleting ? 55 : 110;
+
+        if (!isDeleting && charIndex === currentRole.length) {
+            speed = 2500; // pause at end
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+            speed = 400;
+        }
+
+        timeout = setTimeout(type, speed);
+    }
+
+    type();
+
+    window.heroTypewriterInstance = {
+        updateRoles: (newRoles) => {
+            roles = newRoles;
+            roleIndex = 0;
+            charIndex = 0;
+            isDeleting = false;
+            clearTimeout(timeout);
+            element.textContent = '';
+            type();
+        }
+    };
 }
 
 // ===== SCROLL EFFECTS =====

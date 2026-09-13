@@ -106,19 +106,15 @@
         <section class="hero section" id="home">
             <div class="hero__container container">
                 <div class="hero__data">
-                    <h1 class="hero__title">
-                        <span data-i18n="hero_greeting">Halo, saya</span>
-                        <span class="hero__name gradient-text">Azzikra Praqasta Kusuma</span>
+                    <h1 class="hero__title hero__title--editorial">
+                        <span class="editorial-line">AZZIKRA</span>
+                        <span class="editorial-line">PRAQASTA.</span>
+                        <span class="editorial-line accent-line"><span id="hero-typewriter"></span><span class="hero-typewriter-cursor">_</span></span>
                     </h1>
-                    <div class="hero__role">
-                        <span class="hero__role-prefix">&gt;&gt; </span>
-                        <span class="typewriter" id="typewriter"></span>
-                        <span class="cursor">|</span>
-                    </div>
                     <p class="hero__description" data-i18n="hero_description">
-                        Full Stack Developer & Tech Enthusiast dengan 3+ tahun pengalaman membangun aplikasi web modern,
-                        desain UI/UX, eksplorasi IoT, dan AI Automation. Terbiasa merancang solusi digital yang
-                        scalable, berdampak nyata, dan user-centric untuk kebutuhan bisnis modern.
+                        Insinyur perangkat lunak &amp; IT Support dengan 3+ tahun membangun solusi web full stack,
+                        mengelola infrastruktur server, dan merancang pengalaman digital yang intuitif.
+                        Dari baris kode hingga kabel jaringan — saya hadir untuk membuat teknologi bekerja lebih baik.
                     </p>
                     <div class="hero__cta">
                         <a href="https://wa.me/6281316443334" class="btn btn--primary" target="_blank">
@@ -164,24 +160,26 @@
                             <!-- Outer image (overlaps flawlessly, top half pops out freely) -->
                             <img src="assets/img/perfil.png" alt="Azzikra Praqasta" class="hero__img hero__img--outer">
                         </div>
+
+                        <!-- Floating Skill Badges -->
+                        <div class="hero__badges">
+                            <span class="floating-badge badge--backend">
+                                <i class='bx bx-server'></i> Backend
+                            </span>
+                            <span class="floating-badge badge--it-support">
+                                <i class='bx bx-support'></i> IT Support
+                            </span>
+                            <span class="floating-badge badge--fullstack">
+                                <i class='bx bx-code-block'></i> Full Stack Web
+                            </span>
+                            <span class="floating-badge badge--uiux">
+                                <i class='bx bx-palette'></i> UI / UX
+                            </span>
+                            <span class="floating-badge badge--devops">
+                                <i class='bx bx-infinite'></i> DevOps
+                            </span>
+                        </div>
                     </div>
-                    <div class="floating-badge badge--1">
-                        <i class='bx bx-code-alt'></i>
-                        <span>Full Stack</span>
-                    </div>
-                    <div class="floating-badge badge--2">
-                        <i class='bx bx-data'></i>
-                        <span>Backend</span>
-                    </div>
-                    <div class="floating-badge badge--3">
-                        <i class='bx bx-palette'></i>
-                        <span>UI/UX</span>
-                    </div>
-                    <div class="floating-badge badge--4">
-                        <i class='bx bx-support'></i>
-                        <span>IT Support</span>
-                    </div>
-                </div>
             </div>
             <div class="hero__scroll">
                 <a href="#about" class="scroll-indicator">
@@ -234,19 +232,15 @@
                     </div>
                     <div class="about__content">
                         <h3 class="about__name">Azzikra Praqasta Kusuma</h3>
-                        <p class="about__role gradient-text" data-i18n="about_role">Full Stack Web Developer</p>
+                        <p class="about__role gradient-text"><span class="about-typewriter" id="about-typewriter"></span><span class="typewriter-cursor">|</span></p>
                         <p class="about__text" data-i18n="about_text_1">
-                            Lulusan S1 Sistem Informasi Universitas Mercu Buana (IPK 3.55/4.00) yang
+                            Lulusan S1 Sistem Informasi Universitas Mercu Buana (IPK 3.57/4.00) yang
                             adaptif, cepat belajar, dan memiliki ketertarikan kuat pada pemecahan masalah melalui
                             teknologi. Berpengalaman lebih dari 3 tahun di pengembangan aplikasi web full stack
                             dengan Node.js, Express.js, React.js, serta integrasi database MySQL/SQL dan RESTful API.
                         </p>
                         <p class="about__text" data-i18n="about_text_2">
-                            Saya juga memiliki pengalaman sebagai IT Support dan Guru TIK, sehingga terbiasa
-                            menjembatani kebutuhan bisnis, user non-teknis, dan solusi teknis.
-                            Terbiasa bekerja secara kolaboratif maupun mandiri, mengelola proyek menggunakan Trello &
-                            GitHub, serta menjaga komunikasi yang jelas dengan stakeholder untuk menghadirkan solusi
-                            yang efektif, scalable, dan ramah pengguna.
+                            Selain pengembangan perangkat lunak, saya juga ahli sebagai IT Support & System Administrator. Saya terbiasa mengelola server virtualisasi (Proxmox, Docker), infrastruktur jaringan, serta menjembatani kebutuhan bisnis antara pengguna non-teknis dengan solusi teknis. Saya siap menghadirkan sistem yang scalable, handal, dan berorientasi pada efisiensi.
                         </p>
                         <div class="about__info-grid">
                             <div class="about__info-item">
@@ -263,7 +257,7 @@
                             </div>
                             <div class="about__info-item">
                                 <i class='bx bxs-graduation'></i>
-                                <span data-i18n="about_gpa">IPK 3.55 / 4.00</span>
+                                <span data-i18n="about_gpa">IPK 3.57 / 4.00</span>
                             </div>
                         </div>
                     </div>
@@ -414,6 +408,10 @@
                                 <img src="https://skillicons.dev/icons?i=express" alt="Express.js">
                                 <span>Express.js</span>
                             </div>
+                            <div class="marquee-card">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Proxmox_logo.svg" alt="Proxmox" style="filter: brightness(0.9); height: 40px; width: 40px;">
+                                <span>Proxmox</span>
+                            </div>
                             <!-- Duplicate set for seamless loop -->
                             <div class="marquee-card" aria-hidden="true">
                                 <img src="https://skillicons.dev/icons?i=vscode" alt="VS Code">
@@ -454,6 +452,10 @@
                             <div class="marquee-card" aria-hidden="true">
                                 <img src="https://skillicons.dev/icons?i=express" alt="Express.js">
                                 <span>Express.js</span>
+                            </div>
+                            <div class="marquee-card" aria-hidden="true">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Proxmox_logo.svg" alt="Proxmox" style="filter: brightness(0.9); height: 40px; width: 40px;">
+                                <span>Proxmox</span>
                             </div>
                         </div>
                     </div>
@@ -500,10 +502,11 @@
                         </div>
                         <ul class="skill-category-list">
                             <li><i class='bx bx-git-branch'></i> <span>VS Code, GitHub, Git, Trello</span></li>
+                            <li><i class='bx bx-server'></i> <span>Proxmox VE, Docker, Linux (Ubuntu/Debian)</span></li>
                             <li><i class='bx bx-test-tube'></i> <span>Postman (API Testing)</span></li>
                             <li><i class='bx bxl-figma'></i> <span>Figma, Canva Pro, OBS Studio, Capcut</span></li>
-                            <li><i class='bx bx-terminal'></i> <span>Windows & Ubuntu Administration</span></li>
-                            <li><i class='bx bx-network-chart'></i> <span>Microsoft Office, Cisco Packet Tracer</span></li>
+                            <li><i class='bx bx-terminal'></i> <span>Windows Server & IT Troubleshooting</span></li>
+                            <li><i class='bx bx-network-chart'></i> <span>MikroTik, Cisco Packet Tracer, Jaringan Dasar</span></li>
                         </ul>
                     </div>
                 </div>
@@ -968,9 +971,9 @@
                             <div class="timeline__footer">
                                 <span class="timeline__date">
                                     <i class='bx bx-calendar'></i>
-                                    <span data-exp-start="Apr 2026">Apr 2026 – Sekarang</span>
+                                    <span data-exp-start="Apr 2025">April 2025 – Sekarang</span>
                                 </span>
-                                <span class="timeline__duration" data-start-date="2026-04-01">6 Bulan</span>
+                                <span class="timeline__duration" data-start-date="2025-04-01"></span>
                             </div>
                         </div>
                     </div>
