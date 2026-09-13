@@ -8,6 +8,16 @@
 
    ============================================================ */
 
+// ===== BROWSER SCROLL RESTORATION =====
+// Prevent browser from restoring scroll position on refresh and clear hash
+if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+}
+window.scrollTo(0, 0);
+if (window.location.hash) {
+    history.replaceState(null, null, window.location.pathname);
+}
+
 // ===== i18n TRANSLATIONS =====
 
 const translations = {
@@ -293,7 +303,7 @@ const translations = {
         ],
         // Hero big typewriter
         hero_roles: [
-            "FULL STACK ENGINEER.",
+            "FULL STACK WEB DEV.",
             "IT SUPPORT.",
             "UI/UX DESIGNER.",
             "DEVOPS ENGINEER."
@@ -580,7 +590,7 @@ const translations = {
         ],
         // Hero big typewriter
         hero_roles: [
-            "FULL STACK ENGINEER.",
+            "FULL STACK WEB DEV.",
             "IT SUPPORT.",
             "UI/UX DESIGNER.",
             "DEVOPS ENGINEER."
@@ -782,7 +792,7 @@ function setLanguage(lang) {
     }
     // Update hero typewriter roles on language change
     if (window.heroTypewriterInstance) {
-        window.heroTypewriterInstance.updateRoles(t.hero_roles || ["FULL STACK ENGINEER."]);
+        window.heroTypewriterInstance.updateRoles(t.hero_roles || ["FULL STACK WEB DEV."]);
     }
 
     // Update CV download button based on active language
@@ -1279,7 +1289,7 @@ function initHeroTypewriter() {
     if (!element) return;
 
     const t = translations[currentLang];
-    let roles = t.hero_roles || ['FULL STACK ENGINEER.'];
+    let roles = t.hero_roles || ['FULL STACK WEB DEV.'];
     let roleIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
