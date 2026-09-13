@@ -843,9 +843,11 @@ function initNavigation() {
         navOverlay.addEventListener('click', closeMenu);
     }
 
-    // Close menu on link click
+    // Close menu on link click — but NOT on the dropdown toggle (it opens accordion, not closes menu)
     navLinks.forEach(link => {
-        link.addEventListener('click', closeMenu);
+        if (!link.classList.contains('nav__dropdown-toggle')) {
+            link.addEventListener('click', closeMenu);
+        }
     });
 
     // Header scroll effect
@@ -969,8 +971,17 @@ function initNavDropdown() {
             toggle.classList.remove('open');
 
             const navMenu = document.getElementById('nav-menu');
+            const navOverlay = document.getElementById('nav-overlay');
 
-            if (navMenu) navMenu.classList.remove('show-menu');
+            if (navMenu) {
+                navMenu.classList.remove('show-menu');
+                // Also restore pointer-events
+            }
+            if (navOverlay) {
+                navOverlay.classList.remove('show-overlay');
+                setTimeout(() => { navOverlay.style.display = 'none'; }, 350);
+            }
+            document.body.style.overflow = '';
 
         });
 

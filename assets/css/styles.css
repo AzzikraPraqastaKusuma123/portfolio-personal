@@ -835,6 +835,8 @@ button {
 
 /* Mobile: dropdown menjadi accordion */
 @media screen and (max-width: 768px) {
+
+    /* Dropdown accordion on mobile */
     .nav__dropdown {
         position: static;
         transform: none;
@@ -858,7 +860,7 @@ button {
     }
 
     .nav__dropdown.show {
-        max-height: 200px;
+        max-height: 300px;
         transform: none;
     }
 
@@ -866,19 +868,36 @@ button {
         max-height: 0;
     }
 
+    /* Dropdown links: bigger touch target on mobile */
     .nav__dropdown-link {
-        padding: 0.5rem var(--space-md);
-        font-size: var(--fs-sm);
+        padding: 0.75rem var(--space-md);
+        font-size: var(--fs-base);
+        font-weight: 500;
+        color: var(--text-secondary);
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        pointer-events: auto;
+        cursor: pointer;
     }
 
+    /* Dropdown toggle button styling on mobile */
     .nav__dropdown-toggle {
         width: 100%;
         justify-content: space-between;
-        font-size: 1rem;
+        font-size: var(--fs-md);
         font-weight: 600;
         color: var(--text-primary);
         padding: var(--space-sm) 0;
+        min-height: 44px;
+        position: relative;
+        z-index: 1;
+        pointer-events: auto;
+        cursor: pointer;
     }
+
 }
 
 .nav__actions {
@@ -5336,10 +5355,31 @@ button {
         /* Above header (1000) so menu content is on top */
         z-index: 1002;
         box-shadow: -8px 0 30px rgba(0, 0, 0, 0.4);
+        /* Ensure the menu and its children are interactive */
+        pointer-events: none;
+        overflow-y: auto;
     }
 
     .nav__menu.show-menu {
         right: 0;
+        /* Activate touch/click events only when menu is open */
+        pointer-events: auto;
+    }
+
+    /* Nav links inside mobile menu must be fully clickable */
+    .nav__menu .nav__list {
+        position: relative;
+        z-index: 1;
+        pointer-events: auto;
+    }
+
+    .nav__menu .nav__link,
+    .nav__menu .nav__dropdown-link,
+    .nav__menu .nav__close {
+        position: relative;
+        z-index: 1;
+        pointer-events: auto;
+        cursor: pointer;
     }
 
     /* Backdrop overlay for mobile nav — must sit BELOW header (z:1000) so header stays sharp */
@@ -5777,16 +5817,21 @@ button {
 
 }
 
-/* For very small language switcher on mobile, add mobile lang switcher in nav menu */
+/* lang-switcher-mobile: hidden by default on ALL screen sizes */
+/* It only appears inside the mobile nav drawer on small screens */
+.lang-switcher-mobile {
+    display: none !important;
+}
 
-@media screen and (max-width: 480px) {
+/* Show it inside the nav menu on screens where the header lang-switcher is hidden */
+@media screen and (max-width: 768px) {
 
     .nav__menu .lang-switcher-mobile {
-
-        display: flex;
-
+        display: flex !important;
         margin-top: var(--space-xl);
-
+        pointer-events: auto;
+        position: relative;
+        z-index: 1;
     }
 
 }
