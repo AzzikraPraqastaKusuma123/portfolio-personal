@@ -28,7 +28,7 @@
     <link rel="apple-touch-icon" href="logo-praqasta.png">
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css?v=5">
 
     <title>Azzikra Praqasta Kusuma | Portfolio</title>
 </head>
@@ -46,7 +46,8 @@
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li class="nav__item nav__item--dropdown">
+                    <!-- Desktop Dropdown -->
+                    <li class="nav__item nav__item--dropdown desktop-only">
                         <button class="nav__link nav__dropdown-toggle">
                             <span data-i18n="nav_home">Beranda</span> <i class='bx bx-chevron-down nav__dropdown-icon'></i>
                         </button>
@@ -63,6 +64,11 @@
                             </li>
                         </ul>
                     </li>
+                    <!-- Mobile Simple Link -->
+                    <li class="nav__item mobile-only">
+                        <a href="#home" class="nav__link" data-i18n="nav_home">Beranda</a>
+                    </li>
+                    <li class="nav__item"><a href="#about" class="nav__link" data-i18n="nav_about">Tentang</a></li>
                     <li class="nav__item"><a href="#skills" class="nav__link" data-i18n="nav_skills">Keahlian</a></li>
                     <li class="nav__item"><a href="#projects" class="nav__link" data-i18n="nav_projects">Proyek</a></li>
                     <li class="nav__item"><a href="#experience" class="nav__link"
@@ -125,7 +131,7 @@
                         <span class="editorial-line accent-line"><span id="hero-typewriter"></span><span class="hero-typewriter-cursor">_</span></span>
                     </h1>
                     <p class="hero__description" data-i18n="hero_description">
-                        Insinyur perangkat lunak &amp; IT Support dengan 3+ tahun membangun solusi web full stack,
+                        Full Stack &amp; IT Support dengan 3+ tahun membangun solusi web full stack,
                         mengelola infrastruktur server, dan merancang pengalaman digital yang intuitif.
                         Dari baris kode hingga kabel jaringan, saya hadir untuk membuat teknologi bekerja lebih baik.
                     </p>
@@ -520,6 +526,24 @@
                             <li><i class='bx bxl-figma'></i> <span>Figma, Canva Pro, OBS Studio, Capcut</span></li>
                             <li><i class='bx bx-terminal'></i> <span>Windows Server & IT Troubleshooting</span></li>
                             <li><i class='bx bx-network-chart'></i> <span>MikroTik, Cisco Packet Tracer, Jaringan Dasar</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- AI & Automation Card -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <div class="skill-category-icon">
+                                <i class='bx bx-bot'></i>
+                            </div>
+                            <h3 class="skill-category-title">AI &amp; Automation</h3>
+                        </div>
+                        <ul class="skill-category-list">
+                            <li><i class='bx bx-network-chart'></i> <span>n8n Workflow Automation</span></li>
+                            <li><i class='bx bx-brain'></i> <span>Google Gemini CLI &amp; Gemini API</span></li>
+                            <li><i class='bx bx-bot'></i> <span>Antigravity (AGY) AI Agent Framework</span></li>
+                            <li><i class='bx bx-chip'></i> <span>LLM: Claude, Hermes, LLaMA, Groq</span></li>
+                            <li><i class='bx bx-code-curly'></i> <span>Agentic Coding (Claude Code, Cursor)</span></li>
+                            <li><i class='bx bx-cog'></i> <span>AI Prompt Engineering &amp; RAG Pipeline</span></li>
                         </ul>
                     </div>
                 </div>
@@ -964,7 +988,7 @@
                                 <div class="timeline__img-overlay"></div>
                                 <span class="timeline__status timeline__status--latest">
                                     <i class='bx bx-radio-circle-marked'></i>
-                                    <span>Terbaru</span>
+                                    <span data-i18n="exp_latest">Terbaru</span>
                                 </span>
                             </div>
                             <div class="timeline__body">

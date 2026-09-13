@@ -726,10 +726,8 @@ button {
 
 .nav__item--dropdown:hover .nav__dropdown-toggle,
 .nav__dropdown-toggle.open {
-    background: var(--primary);
-    color: #fff;
-    border-color: transparent;
-    box-shadow: 0 4px 18px rgba(124, 58, 237, 0.4);
+    color: var(--primary);
+    background: transparent;
 }
 
 .nav__dropdown-icon {
@@ -751,7 +749,7 @@ button {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-lg), 0 0 0 1px rgba(124, 58, 237, 0.12);
+    box-shadow: var(--shadow-lg), 0 0 0 1px rgba(255, 59, 48, 0.15);
     min-width: 180px; /* lebih kompak */
     padding: 6px; /* lebih rapat */
     opacity: 0;
@@ -826,7 +824,7 @@ button {
 
 .nav__dropdown-link:hover {
     color: var(--text-primary);
-    background: rgba(124, 58, 237, 0.1);
+    background: rgba(255, 59, 48, 0.1);
 }
 
 .nav__dropdown-link:hover i {
@@ -859,13 +857,20 @@ button {
         display: none;
     }
 
+    /* Mobile: ONLY click (class 'show') opens the accordion — no hover */
     .nav__dropdown.show {
-        max-height: 300px;
-        transform: none;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        transform: none !important;
+        max-height: 300px !important;
+        transition: max-height 0.35s ease !important;
     }
 
+    /* Prevent hover from accidentally opening accordion on touch devices */
     .nav__item--dropdown:hover .nav__dropdown {
         max-height: 0;
+        /* inherit closed state on mobile – only .show opens it */
     }
 
     /* Dropdown links: bigger touch target on mobile */
@@ -896,6 +901,23 @@ button {
         z-index: 1;
         pointer-events: auto;
         cursor: pointer;
+        background: transparent !important;
+        box-shadow: none !important;
+        border-radius: var(--radius-md);
+    }
+
+    /* On mobile: open state = red text only, no background fill */
+    .nav__dropdown-toggle.open,
+    .nav__item--dropdown:hover .nav__dropdown-toggle {
+        color: var(--primary) !important;
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+
+    /* Dropdown link hover on mobile: red tint */
+    .nav__dropdown-link:hover {
+        color: var(--primary);
+        background: rgba(255, 59, 48, 0.08) !important;
     }
 
 }
@@ -1087,7 +1109,7 @@ button {
     font-weight: 900;
     line-height: 0.9;
     letter-spacing: -2px;
-    margin-bottom: var(--space-xl);
+    margin-bottom: var(--space-md);
     text-transform: uppercase;
     /* Prevent any overflow on the title container */
     overflow: hidden;
@@ -5325,6 +5347,18 @@ button {
 
 }
 
+/* Utility classes for responsive toggle */
+@media screen and (max-width: 768px) {
+    .desktop-only {
+        display: none !important;
+    }
+}
+@media screen and (min-width: 769px) {
+    .mobile-only {
+        display: none !important;
+    }
+}
+
 /* Mobile */
 
 @media screen and (max-width: 768px) {
@@ -5350,14 +5384,14 @@ button {
         height: 100vh;
         background: var(--bg-secondary);
         border-left: 1px solid var(--border-color);
-        padding: 5rem 2rem 2rem;
+        padding: 0;
         transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-        /* Above header (1000) so menu content is on top */
         z-index: 1002;
         box-shadow: -8px 0 30px rgba(0, 0, 0, 0.4);
-        /* Ensure the menu and its children are interactive */
         pointer-events: none;
         overflow-y: auto;
+        display: flex;
+        flex-direction: column;
     }
 
     .nav__menu.show-menu {
@@ -5366,20 +5400,45 @@ button {
         pointer-events: auto;
     }
 
-    /* Nav links inside mobile menu must be fully clickable */
+    /* Nav list: give it top padding so it doesn't collide with close button */
     .nav__menu .nav__list {
         position: relative;
         z-index: 1;
         pointer-events: auto;
+        padding: 5rem 2rem 1rem;
+        flex: 1;
     }
 
     .nav__menu .nav__link,
-    .nav__menu .nav__dropdown-link,
-    .nav__menu .nav__close {
+    .nav__menu .nav__dropdown-link {
         position: relative;
         z-index: 1;
         pointer-events: auto;
         cursor: pointer;
+    }
+
+    .nav__menu .nav__close {
+        z-index: 1100;
+        pointer-events: auto;
+        position: absolute;
+        top: 1.25rem;
+        right: 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: rgba(255, 59, 48, 0.08);
+        color: var(--text-primary);
+        font-size: 1.4rem;
+        cursor: pointer;
+        transition: background 0.2s, color 0.2s;
+    }
+
+    .nav__menu .nav__close:hover {
+        background: rgba(255, 59, 48, 0.18);
+        color: var(--primary);
     }
 
     /* Backdrop overlay for mobile nav — must sit BELOW header (z:1000) so header stays sharp */
@@ -5414,33 +5473,22 @@ button {
     }
 
     .nav__toggle,
-
     .nav__close {
-
         display: flex;
-
         align-items: center;
-
         justify-content: center;
-
         width: 36px;
-
         height: 36px;
-
     }
 
+    /* nav__close inside the drawer is handled above (.nav__menu .nav__close) */
+    /* This rule handles the standalone close button when not inside menu */
     .nav__close {
-
         position: absolute;
-
-        top: 1.5rem;
-
-        right: 1.5rem;
-
+        top: 1.25rem;
+        right: 1.25rem;
         font-size: 1.5rem;
-
         cursor: pointer;
-
     }
 
     .hero {
@@ -5828,7 +5876,9 @@ button {
 
     .nav__menu .lang-switcher-mobile {
         display: flex !important;
-        margin-top: var(--space-xl);
+        margin-top: auto;
+        padding: var(--space-lg) 2rem var(--space-xl);
+        border-top: 1px solid var(--border-color);
         pointer-events: auto;
         position: relative;
         z-index: 1;

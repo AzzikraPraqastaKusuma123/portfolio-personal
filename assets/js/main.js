@@ -36,7 +36,7 @@ const translations = {
 
         hero_greeting: "Halo, saya",
 
-        hero_description: "Insinyur perangkat lunak & IT Support dengan 3+ tahun membangun solusi web full stack, mengelola infrastruktur server, dan merancang pengalaman digital yang intuitif. Dari baris kode hingga kabel jaringan, saya hadir untuk membuat teknologi bekerja lebih baik.",
+        hero_description: "Full Stack & IT Support dengan 3+ tahun membangun solusi web full stack, mengelola infrastruktur server, dan merancang pengalaman digital yang intuitif. Dari baris kode hingga kabel jaringan, saya hadir untuk membuat teknologi bekerja lebih baik.",
 
         hero_contact: "Hubungi Saya",
 
@@ -253,7 +253,7 @@ const translations = {
         contact_form_title: "Kirim Pesan",
 
         // IT Support ITSJ
-
+        exp_latest: "Terbaru",
         exp_itsj_title: "IT Support",
 
         exp_itsj_desc: "Bertanggung jawab dalam pemeliharaan dan dukungan infrastruktur IT di beberapa institusi pendidikan termasuk TK, SD, SMP, dan SMA Al Azhar Kembangan serta Yayasan Al Ikhwan.",
@@ -323,7 +323,7 @@ const translations = {
 
         hero_greeting: "Hello, I'm",
 
-        hero_description: "Software Engineer & IT Support with 3+ years building full stack web solutions, managing server infrastructure, and crafting intuitive digital experiences. From code to network cables, I make technology work smarter.",
+        hero_description: "Full Stack & IT Support with 3+ years building full stack web solutions, managing server infrastructure, and crafting intuitive digital experiences. From code to network cables, I make technology work smarter.",
 
         hero_contact: "Contact Me",
 
@@ -540,7 +540,7 @@ const translations = {
         contact_form_title: "Send a Message",
 
         // IT Support ITSJ
-
+        exp_latest: "Latest",
         exp_itsj_title: "IT Support",
 
         exp_itsj_desc: "Responsible for maintaining and supporting IT infrastructure across educational institutions including TK, SD, SMP, and SMA Al Azhar Kembangan, as well as Yayasan Al Ikhwan.",
